@@ -1,0 +1,174 @@
+[
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_odd.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\odd.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_odd2.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\odd2.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_spot_recycler.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\spot_recycler.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_camera2.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\camera2.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_pose_recycler.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\pose_recycler.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_fade_in.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_button_moon.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\button_moon.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_none.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\none.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_ic_camera.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\ic_camera.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\raw_shutter.mp3.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\raw\\shutter.mp3"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_idle.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\idle.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_horizon_enter4.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\horizon_enter4.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_dialog_loading.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_activity_spot_result_detail.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_spot_result_detail.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_horizon_enter2.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\horizon_enter2.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\font_uhbee_yanneu.ttf.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\font\\uhbee_yanneu.ttf"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_activity_manual.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_manual.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_camera1.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\camera1.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_activity_spot_result.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_spot_result.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_horizon_enter1.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\horizon_enter1.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\xml_actions.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\xml\\actions.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_empty.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\empty.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_pose_back.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\pose_back.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_button.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable-v24\\button.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_note.jpg.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\note.jpg"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\xml_file_paths.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\build\\generated\\res\\pngs\\release\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_activity_main.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\font_uhbee_yanneu_bold.ttf.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\font\\uhbee_yanneu_bold.ttf"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_activity_spot.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_spot.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_activity_splash.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_horizon_enter3.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\horizon_enter3.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\anim_fade_out.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\layout_activity_camera.xml.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\merged_res\\release\\drawable_back.jpg.flat",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\drawable\\back.jpg"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\spot_recycler.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\spot_recycler.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_spot.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_spot.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_spot_result_detail.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_spot_result_detail.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pose_recycler.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\pose_recycler.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_loading.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_camera.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_camera.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_spot_result.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_spot_result.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_manual.xml",
+        "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\layout\\activity_manual.xml"
+    }
+]

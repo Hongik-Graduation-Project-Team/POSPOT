@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\androidSdk\project3\app"
+    name=":app"
+    type="APP"
+    maven="TFLite Object Detection Codelab:app:"
+    gradle="7.0.2"
+    buildFolder="build"
+    bootClassPath="C:\androidSdk\platforms\android-30\android.jar;C:\androidSdk\build-tools\30.0.3\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-30"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

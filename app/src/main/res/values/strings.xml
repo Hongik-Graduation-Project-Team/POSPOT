@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">POSPOT</string>
+    <string name="capture">capture</string>
+    <string name="label">label</string>
+    <string name="score">score</string>
+    <string name="preview_in_camera">preview_in_camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="how_to_use">How to use</string>
+</resources>

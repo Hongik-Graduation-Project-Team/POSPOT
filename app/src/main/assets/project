@@ -1,0 +1,8 @@
+★구현 예정
+- yolo label값 array로 다음 actvity로 보내기
+- resnet label값, yolo label값을 이용하여 포즈, 명소 선정
+- pose > cameraActivity 에서 포즈 recycle view 구현
+- spot > recycleview에서 누르면 정보제공화면
+- 서버에서 이미지 가져오기(int형)
+
+view pager

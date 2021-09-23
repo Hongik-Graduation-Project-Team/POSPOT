@@ -1,0 +1,31 @@
+org/tensorflow/codelabs/objectdetection/BuildConfig.java
+ org.tensorflow.codelabs.objectdetection.BuildConfig
+org/tensorflow/codelabs/objectdetection/ml/Resnet.java
+ org.tensorflow.codelabs.objectdetection.ml.Resnet
+ org.tensorflow.codelabs.objectdetection.ml.Resnet$1
+ org.tensorflow.codelabs.objectdetection.ml.Resnet$Outputs
+org/tensorflow/codelabs/objectdetection/databinding/ActivityManualBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivityManualBinding
+org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotBinding
+org/tensorflow/codelabs/objectdetection/databinding/ActivityCameraBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivityCameraBinding
+org/tensorflow/codelabs/objectdetection/databinding/DialogLoadingBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.DialogLoadingBinding
+org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotResultBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotResultBinding
+org/tensorflow/codelabs/objectdetection/databinding/SpotRecyclerBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.SpotRecyclerBinding
+org/tensorflow/codelabs/objectdetection/databinding/PoseRecyclerBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.PoseRecyclerBinding
+org/tensorflow/codelabs/objectdetection/ml/Model.java
+ org.tensorflow.codelabs.objectdetection.ml.Model
+ org.tensorflow.codelabs.objectdetection.ml.Model$1
+ org.tensorflow.codelabs.objectdetection.ml.Model$DetectionResult
+ org.tensorflow.codelabs.objectdetection.ml.Model$Outputs
+org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotResultDetailBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotResultDetailBinding
+org/tensorflow/codelabs/objectdetection/databinding/ActivitySplashBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivitySplashBinding
+org/tensorflow/codelabs/objectdetection/databinding/ActivityMainBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivityMainBinding

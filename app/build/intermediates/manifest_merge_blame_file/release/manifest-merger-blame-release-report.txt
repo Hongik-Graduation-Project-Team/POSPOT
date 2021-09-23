@@ -1,0 +1,153 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.tensorflow.codelabs.objectdetection"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml
+10
+11    <uses-feature android:name="android.hardware.camera.any" />
+11-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:5:5-64
+11-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:5:19-61
+12
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:7:5-65
+13-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:7:22-62
+14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+14-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:8:5-81
+14-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:8:22-78
+15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+15-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:9:5-80
+15-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:9:22-77
+16
+17    <queries>
+17-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:11:5-15:15
+18        <intent>
+18-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:12:9-14:18
+19            <action android:name="android.media.action.IMAGE_CAPTURE" />
+19-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:13:13-73
+19-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:13:21-70
+20        </intent>
+21    </queries>
+22
+23    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+24
+25    <application
+25-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:17:5-66:19
+26        android:allowBackup="true"
+26-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:18:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.6.0] C:\Users\김대경\caches\transforms-3\348f6d52d990d4fb4fcc5abc17a1cdcd\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+28        android:extractNativeLibs="false"
+29        android:icon="@mipmap/ic_launcher"
+29-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:19:9-43
+30        android:label="@string/app_name"
+30-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:20:9-41
+31        android:roundIcon="@mipmap/ic_launcher_round"
+31-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:21:9-54
+32        android:supportsRtl="true"
+32-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:22:9-35
+33        android:theme="@style/Theme.ObjectDetection" >
+33-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:23:9-53
+34        <activity
+34-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:24:9-26:39
+35            android:name="org.tensorflow.codelabs.objectdetection.SpotResultDetailActivity"
+35-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:25:13-53
+36            android:exported="true" />
+36-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:26:13-36
+37        <activity
+37-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:27:9-29:39
+38            android:name="org.tensorflow.codelabs.objectdetection.SpotResultActivity"
+38-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:28:13-47
+39            android:exported="true" />
+39-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:29:13-36
+40        <activity
+40-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:30:9-32:39
+41            android:name="org.tensorflow.codelabs.objectdetection.SpotActivity"
+41-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:31:13-41
+42            android:exported="true" />
+42-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:32:13-36
+43        <activity
+43-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:33:9-35:39
+44            android:name="org.tensorflow.codelabs.objectdetection.ManualActivity"
+44-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:34:13-43
+45            android:exported="true" />
+45-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:35:13-36
+46
+47        <meta-data
+47-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:37:9-39:47
+48            android:name="com.google.android.actions"
+48-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:38:13-54
+49            android:resource="@xml/actions" />
+49-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:39:13-44
+50
+51        <activity
+51-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:41:9-43:39
+52            android:name="org.tensorflow.codelabs.objectdetection.CameraActivity"
+52-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:42:13-43
+53            android:exported="true" />
+53-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:43:13-36
+54        <activity
+54-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:44:9-52:20
+55            android:name="org.tensorflow.codelabs.objectdetection.SplashActivity"
+55-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:45:13-43
+56            android:exported="true" >
+56-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:46:13-36
+57            <intent-filter>
+57-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:47:13-51:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:48:17-69
+58-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:48:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:50:17-77
+60-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:50:27-74
+61            </intent-filter>
+62        </activity>
+63        <activity
+63-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:53:9-55:39
+64            android:name="org.tensorflow.codelabs.objectdetection.MainActivity"
+64-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:54:13-41
+65            android:exported="true" />
+65-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:55:13-36
+66
+67        <provider
+67-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:57:9-65:20
+68            android:name="androidx.core.content.FileProvider"
+68-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:58:13-62
+69            android:authorities="org.tensorflow.codelabs.objectdetection.fileprovider"
+69-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:59:13-87
+70            android:exported="false"
+70-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:60:13-37
+71            android:grantUriPermissions="true" >
+71-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:61:13-47
+72            <meta-data
+72-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:62:13-64:54
+73                android:name="android.support.FILE_PROVIDER_PATHS"
+73-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:63:17-67
+74                android:resource="@xml/file_paths" />
+74-->C:\androidSdk\project3\app\src\main\AndroidManifest.xml:64:17-51
+75        </provider>
+76
+77        <service
+77-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:26:9-35:19
+78            android:name="androidx.camera.core.impl.MetadataHolderService"
+78-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:27:13-75
+79            android:enabled="false"
+79-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:28:13-36
+80            android:exported="false" >
+80-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:29:13-37
+81            <meta-data
+81-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:32:13-34:89
+82                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+82-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:33:17-103
+83                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+83-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:34:17-86
+84        </service>
+85    </application>
+86
+87</manifest>
