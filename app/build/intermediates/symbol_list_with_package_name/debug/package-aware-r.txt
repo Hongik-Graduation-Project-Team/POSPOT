@@ -1845,6 +1845,7 @@ drawable notify_panel_notification_icon_bg
 drawable odd
 drawable odd2
 drawable pose_back
+drawable reset
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2078,7 +2079,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id img
 id immediateStop
 id included
 id info
@@ -2098,6 +2098,7 @@ id line3
 id linear
 id listMode
 id list_item
+id mViewPager
 id main_layout
 id masked
 id match_constraint
@@ -2201,6 +2202,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id reset
 id reverseSawtooth
 id right
 id rightToLeft

@@ -35,7 +35,7 @@ class SpotProfileAdapter(private val context: Context) : RecyclerView.Adapter<Sp
         fun bind(item: SpotProfileData) {
             txtName.text = item.name
             txtAge.text = item.address
-            Glide.with(itemView).load(item.img).apply(RequestOptions.bitmapTransform(RoundedCorners(50))).into(imgProfile)
+            Glide.with(itemView).load(item.img1).apply(RequestOptions.bitmapTransform(RoundedCorners(50))).into(imgProfile)
 
             itemView.setOnClickListener {
                 Intent(context, SpotResultDetailActivity::class.java).apply {

@@ -4,12 +4,12 @@ package org.tensorflow.codelabs.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import androidx.viewpager.widget.ViewPager;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,12 +20,12 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView img;
+  public final ViewPager mViewPager;
 
   private ActivitySpotResultDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView img) {
+      @NonNull ViewPager mViewPager) {
     this.rootView = rootView;
-    this.img = img;
+    this.mViewPager = mViewPager;
   }
 
   @Override
@@ -55,13 +55,13 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.img;
-      ImageView img = ViewBindings.findChildViewById(rootView, id);
-      if (img == null) {
+      id = R.id.mViewPager;
+      ViewPager mViewPager = ViewBindings.findChildViewById(rootView, id);
+      if (mViewPager == null) {
         break missingId;
       }
 
-      return new ActivitySpotResultDetailBinding((ConstraintLayout) rootView, img);
+      return new ActivitySpotResultDetailBinding((ConstraintLayout) rootView, mViewPager);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

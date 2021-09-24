@@ -45,7 +45,7 @@ class CameraActivity : AppCompatActivity() {
 
         // 카메라 시작
         startCamera()
-
+        // recycleview 생성
         initRecycler()
 
         //displayRatio()
@@ -55,6 +55,10 @@ class CameraActivity : AppCompatActivity() {
                 background.setImageResource(R.drawable.odd2)
             }
         })
+
+        reset.setOnClickListener{
+            background.setImageResource(R.drawable.empty)
+        }
     }
 
     private fun displayRatio() {

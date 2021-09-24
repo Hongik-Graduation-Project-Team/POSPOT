@@ -36,20 +36,29 @@ class SpotResultActivity : AppCompatActivity() {
         }
 
         datas.apply {
-            add(SpotProfileData(img = R.drawable.back, name = "resnet 라벨값", address = res))
+            add(SpotProfileData(img1 = R.drawable.back, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "resnet 라벨값", address = res))
 
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }
         datas.apply {
-            add(SpotProfileData(img = R.drawable.odd, name = "resnet 라벨값", address = res))
-            add(SpotProfileData(img = R.drawable.odd, name = "yolo 라벨값", address = yolo2))
-            add(SpotProfileData(img = R.drawable.odd, name = "3", address = "3"))
-            add(SpotProfileData(img = R.drawable.odd, name = "4", address = "4"))
-            add(SpotProfileData(img = R.drawable.odd, name = "5", address = "5"))
-            add(SpotProfileData(img = R.drawable.odd, name = "6", address = "6"))
-            add(SpotProfileData(img = R.drawable.odd, name = "7", address = "7"))
-            add(SpotProfileData(img = R.drawable.odd, name = "8", address = "8"))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "resnet 라벨값", address = res))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "yolo 라벨값", address = yolo2))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "3", address = "3"))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "4", address = "4"))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "5", address = "5"))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "6", address = "6"))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "7", address = "7"))
+            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "8", address = "8"))
 
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()

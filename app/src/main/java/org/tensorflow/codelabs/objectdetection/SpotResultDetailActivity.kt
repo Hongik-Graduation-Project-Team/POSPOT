@@ -11,9 +11,6 @@ class SpotResultDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spot_result_detail)
 
-        //datas = intent.getParcelableExtra("data")!!
-
-        //Glide.with(this).load(datas.img).into(img)
-        //tv_name.text = datas.name
+        datas = intent.getParcelableExtra("data")!!
     }
 }

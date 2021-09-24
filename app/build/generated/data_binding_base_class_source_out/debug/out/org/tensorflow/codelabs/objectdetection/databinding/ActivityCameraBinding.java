@@ -32,15 +32,19 @@ public final class ActivityCameraBinding implements ViewBinding {
   public final RecyclerView cameraProfile;
 
   @NonNull
+  public final Button reset;
+
+  @NonNull
   public final PreviewView viewFinder;
 
   private ActivityCameraBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView background,
-      @NonNull Button btnTakePhoto, @NonNull RecyclerView cameraProfile,
+      @NonNull Button btnTakePhoto, @NonNull RecyclerView cameraProfile, @NonNull Button reset,
       @NonNull PreviewView viewFinder) {
     this.rootView = rootView;
     this.background = background;
     this.btnTakePhoto = btnTakePhoto;
     this.cameraProfile = cameraProfile;
+    this.reset = reset;
     this.viewFinder = viewFinder;
   }
 
@@ -89,6 +93,12 @@ public final class ActivityCameraBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.reset;
+      Button reset = ViewBindings.findChildViewById(rootView, id);
+      if (reset == null) {
+        break missingId;
+      }
+
       id = R.id.viewFinder;
       PreviewView viewFinder = ViewBindings.findChildViewById(rootView, id);
       if (viewFinder == null) {
@@ -96,7 +106,7 @@ public final class ActivityCameraBinding implements ViewBinding {
       }
 
       return new ActivityCameraBinding((ConstraintLayout) rootView, background, btnTakePhoto,
-          cameraProfile, viewFinder);
+          cameraProfile, reset, viewFinder);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
