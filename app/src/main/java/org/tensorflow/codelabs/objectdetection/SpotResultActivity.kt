@@ -36,8 +36,8 @@ class SpotResultActivity : AppCompatActivity() {
         }
 
         datas.apply {
-            add(SpotProfileData(img1 = R.drawable.back, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "resnet 라벨값", address = res))
+            add(SpotProfileData(img1 = R.drawable.c1, img2 = R.drawable.c2,img3 = R.drawable.c3,
+                img4 = R.drawable.c4,img5 = R.drawable.c5, name = "resnet 라벨값", address = res))
 
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()

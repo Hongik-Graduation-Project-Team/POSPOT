@@ -6,4 +6,7 @@
     <string name="preview_in_camera">preview_in_camera</string>
     <string name="gallery">Gallery</string>
     <string name="how_to_use">How to use</string>
+    <string name="name">name</string>
+    <string name="todo">TODO</string>
+    <string name="address">address</string>
 </resources>

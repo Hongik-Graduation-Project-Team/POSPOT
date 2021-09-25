@@ -1791,6 +1791,11 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable button
 drawable button_moon
+drawable c1
+drawable c2
+drawable c3
+drawable c4
+drawable c5
 drawable camera1
 drawable camera2
 drawable design_fab_background
@@ -2252,6 +2257,7 @@ id spacer
 id special_effects_controller_view_tag
 id spline
 id split_action_bar
+id spot_detail_view
 id spot_layout
 id spot_profile
 id spread
@@ -2336,6 +2342,7 @@ id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id viewpager
 id visible
 id visible_removing_fragment_view_tag
 id west
@@ -2491,6 +2498,7 @@ layout pose_recycler
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spot_detail
 layout spot_recycler
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
@@ -2540,6 +2548,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string address
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
@@ -2615,6 +2624,7 @@ string mtrl_picker_toggle_to_calendar_input_mode
 string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
+string name
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2624,6 +2634,7 @@ string preview_in_camera
 string score
 string search_menu_title
 string status_bar_notification_info_overflow
+string todo
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
