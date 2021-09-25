@@ -22,6 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ObjectDetection">
         <activity
+            android:name=".PoseManualActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SpotManualActivity"
+            android:exported="true" />
+        <activity
             android:name=".SpotResultDetailActivity"
             android:exported="true" />
         <activity

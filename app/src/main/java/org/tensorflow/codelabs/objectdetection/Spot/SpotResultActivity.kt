@@ -36,18 +36,18 @@ class SpotResultActivity : AppCompatActivity() {
         }
 
         datas.apply {
-            add(SpotProfileData(img1 = R.drawable.c1, img2 = R.drawable.c2,img3 = R.drawable.c3,
-                img4 = R.drawable.c4,img5 = R.drawable.c5, name = "resnet 라벨값", address = res))
+            add(SpotProfileData(img1 = R.drawable.track, img2 = R.drawable.odd,img3 = R.drawable.odd,
+                img4 = R.drawable.odd,img5 = R.drawable.odd, name = "resnet 라벨값", address = res))
 
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }
         datas.apply {
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+            add(SpotProfileData(img1 = R.drawable.building, img2 = R.drawable.empty,img3 = R.drawable.empty,
                 img4 = R.drawable.empty,img5 = R.drawable.empty, name = "resnet 라벨값", address = res))
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+            add(SpotProfileData(img1 = R.drawable.waterfall, img2 = R.drawable.empty,img3 = R.drawable.empty,
                 img4 = R.drawable.empty,img5 = R.drawable.empty, name = "yolo 라벨값", address = yolo2))
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
+            add(SpotProfileData(img1 = R.drawable.catholic_church, img2 = R.drawable.empty,img3 = R.drawable.empty,
                 img4 = R.drawable.empty,img5 = R.drawable.empty, name = "3", address = "3"))
             add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
                 img4 = R.drawable.empty,img5 = R.drawable.empty, name = "4", address = "4"))

@@ -11,7 +11,6 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://$USER_HOME$/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout/2.1.0/53df642f9d86b4432aad51ed61b5c5ea05c8afa2/constraintlayout-2.1.0-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout/2.1.0/53df642f9d86b4432aad51ed61b5c5ea05c8afa2/constraintlayout-2.1.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

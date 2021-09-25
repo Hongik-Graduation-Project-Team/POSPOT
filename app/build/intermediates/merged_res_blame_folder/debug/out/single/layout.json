@@ -1,5 +1,25 @@
 [
     {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_pose_manual.xml",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_pose_manual.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_loading.xml",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\dialog_loading.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_spot_manual.xml",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_spot_manual.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_spot.xml",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_spot.xml"
+    },
+    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\pose_recycler.xml",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\pose_recycler.xml"
     },
@@ -16,14 +36,6 @@
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_spot_result.xml"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_loading.xml",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\dialog_loading.xml"
-    },
-    {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_main.xml"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_manual.xml",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_manual.xml"
     },
@@ -38,9 +50,5 @@
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\spot_detail.xml",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\spot_detail.xml"
-    },
-    {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_spot.xml",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_spot.xml"
     }
 ]

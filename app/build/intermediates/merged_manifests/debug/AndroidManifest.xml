@@ -34,6 +34,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.ObjectDetection" >
         <activity
+            android:name="org.tensorflow.codelabs.objectdetection.PoseManualActivity"
+            android:exported="true" />
+        <activity
+            android:name="org.tensorflow.codelabs.objectdetection.SpotManualActivity"
+            android:exported="true" />
+        <activity
             android:name="org.tensorflow.codelabs.objectdetection.SpotResultDetailActivity"
             android:exported="true" />
         <activity

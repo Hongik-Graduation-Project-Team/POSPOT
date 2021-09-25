@@ -18,6 +18,6 @@ class SpotResultDetailActivity : AppCompatActivity() {
         address.setText(datas.address)
     }
     private fun getSpotList(): ArrayList<Int> {
-        return arrayListOf<Int>(datas.img1, datas.img2, datas.img3, datas.img4, datas.img5)
+        return arrayListOf(datas.img1, datas.img2, datas.img3, datas.img4, datas.img5)
     }
 }

@@ -23,10 +23,14 @@ org/tensorflow/codelabs/objectdetection/databinding/DialogLoadingBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.DialogLoadingBinding
 org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotResultBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotResultBinding
+org/tensorflow/codelabs/objectdetection/databinding/ActivityPoseManualBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivityPoseManualBinding
 org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotResultDetailBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotResultDetailBinding
 org/tensorflow/codelabs/objectdetection/databinding/SpotDetailBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.SpotDetailBinding
+org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotManualBinding.java
+ org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotManualBinding
 org/tensorflow/codelabs/objectdetection/databinding/ActivitySplashBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.ActivitySplashBinding
 org/tensorflow/codelabs/objectdetection/databinding/ActivityMainBinding.java
