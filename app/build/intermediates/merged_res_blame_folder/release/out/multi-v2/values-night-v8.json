@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\androidSdk\\project3\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\김대경\\caches\\transforms-3\\5a3e51d9d3bf13afa5f76faada65dc67\\transformed\\material-1.4.0\\res\\values-night-v8\\values-night-v8.xml",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\androidSdk\\project3\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

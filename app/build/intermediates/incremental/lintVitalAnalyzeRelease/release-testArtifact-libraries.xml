@@ -700,8 +700,8 @@
       jars="C:\Users\김대경\caches\modules-2\files-2.1\com.google.auto.value\auto-value-annotations\1.6.3\b88c1bb7f149f6d2cc03898359283e57b08f39cc\auto-value-annotations-1.6.3.jar"
       resolved="com.google.auto.value:auto-value-annotations:1.6.3"/>
   <library
-      name="C:\androidSdk\project3@@:app::release"
-      jars="C:\androidSdk\project3\app\build\intermediates\app_classes\release\classes.jar"
+      name="C:\androidSdk\POSPOT_team@@:app::release"
+      jars="C:\androidSdk\POSPOT_team\app\build\intermediates\app_classes\release\classes.jar"
       resolved="::"/>
   <library
       name="junit:junit:4.13.2@jar"

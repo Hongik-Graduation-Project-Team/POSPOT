@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="C:\androidSdk\project3\app"
+    dir="C:\androidSdk\POSPOT_team\app"
     name=":app"
     type="APP"
     maven="TFLite Object Detection Codelab:app:"
