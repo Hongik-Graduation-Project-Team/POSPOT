@@ -22,9 +22,14 @@ public final class ActivityPoseManualBinding implements ViewBinding {
   @NonNull
   public final TextView text;
 
-  private ActivityPoseManualBinding(@NonNull ConstraintLayout rootView, @NonNull TextView text) {
+  @NonNull
+  public final TextView text2;
+
+  private ActivityPoseManualBinding(@NonNull ConstraintLayout rootView, @NonNull TextView text,
+      @NonNull TextView text2) {
     this.rootView = rootView;
     this.text = text;
+    this.text2 = text2;
   }
 
   @Override
@@ -60,7 +65,13 @@ public final class ActivityPoseManualBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPoseManualBinding((ConstraintLayout) rootView, text);
+      id = R.id.text2;
+      TextView text2 = ViewBindings.findChildViewById(rootView, id);
+      if (text2 == null) {
+        break missingId;
+      }
+
+      return new ActivityPoseManualBinding((ConstraintLayout) rootView, text, text2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

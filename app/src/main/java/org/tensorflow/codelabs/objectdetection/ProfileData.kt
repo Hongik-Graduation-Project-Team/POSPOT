@@ -10,6 +10,6 @@ data class SpotProfileData(var name: String, var address: String,
 
 data class PoseProfileData(
     val obj: String,
-    val img : Int
+    val img : String
 )
 

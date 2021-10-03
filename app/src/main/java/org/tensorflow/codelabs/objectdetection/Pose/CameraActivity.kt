@@ -18,6 +18,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_camera.*
 import kotlinx.android.synthetic.main.activity_spot_result.*
 import org.tensorflow.codelabs.objectdetection.databinding.ActivityCameraBinding
@@ -52,7 +53,11 @@ class CameraActivity : AppCompatActivity() {
 
         profileAdapter.setOnItemClickListener(object : PoseProfileAdapter.OnItemClickListener{
             override fun onItemClick(v: View, data: PoseProfileData, pos: Int) {
-                background.setImageResource(R.drawable.odd2)
+                val address = "http://54.180.95.7/" + data.img
+
+                Glide.with(this@CameraActivity).load(address).into(background)
+                
+                //background.setImageResource(address)
             }
         })
 
@@ -181,15 +186,18 @@ class CameraActivity : AppCompatActivity() {
         camera_profile.adapter = profileAdapter
 
         datas.apply {
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zzafa"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zzaf"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zz"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zz"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zz"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zz"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zz"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zz"))
-            add(PoseProfileData(img = R.drawable.odd2, obj = "zz"))
+            Log.i("1414141","Arraysize = " + mArrayList.size)
+            for (i in 0 until mArrayList.size){
+
+                val address = mArrayList[i].get("address")
+                Log.i("1414141","address : " + address )
+
+                val id = mArrayList[i].get("id")
+                Log.i("1414141","id : " + id )
+                add(PoseProfileData(img = address!!, obj = id!!))
+
+
+            }
 
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()

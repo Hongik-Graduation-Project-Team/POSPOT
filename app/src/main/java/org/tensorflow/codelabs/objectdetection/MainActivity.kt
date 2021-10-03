@@ -84,16 +84,27 @@ class MainActivity : AppCompatActivity(){
         horizon3 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter3)
         horizon4 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter4)
 
+
+
         text.startAnimation(horizon1)
         btn_pose.startAnimation(horizon2)
         btn_spot.startAnimation(horizon3)
         btn_manual.startAnimation(horizon4)
 
+
+        val thread = RequestThread()
+        thread.start()
+
+        Log.i("123","testcount:"+ testcount)
+
+
         // 카메라
         btn_pose.setOnClickListener(View.OnClickListener {
             try {
                 if(cameraPermissionGranted()) {
+
                     dispatchTakePictureIntent()
+
                 }
             } catch (e: ActivityNotFoundException) {
                 Log.e(TAG, e.message.toString())
@@ -211,6 +222,7 @@ class MainActivity : AppCompatActivity(){
                     takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI)
                     //onActivityResult로 이동(카메라를 마치고 Main화면으로 돌아옴)
                     startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+
                 }
             }
         }

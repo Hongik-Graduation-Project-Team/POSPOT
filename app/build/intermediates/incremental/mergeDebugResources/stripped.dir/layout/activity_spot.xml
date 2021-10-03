@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/spot_layout"
+    android:background="@drawable/note"
+    tools:context=".SpotActivity">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="400dp"
+        android:fontFamily="@font/uhbee_yanneu_bold"
+        android:gravity="center"
+        android:text="SPOT"
+        android:textColor="@color/black"
+        android:textSize="55sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_capture"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="50dp"
+        android:background="#00ff0000"
+        android:fontFamily="@font/uhbee_yanneu_bold"
+        android:gravity="center"
+        android:text="Capture"
+        android:textAllCaps="false"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="180dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="300dp"
+        android:background="#00ff0000"
+        android:fontFamily="@font/uhbee_yanneu_bold"
+        android:gravity="center"
+        android:text="Gallery"
+        android:textAllCaps="false"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
