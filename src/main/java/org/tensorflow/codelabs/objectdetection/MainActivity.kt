@@ -89,9 +89,8 @@ class MainActivity : AppCompatActivity(){
         btn_spot.startAnimation(horizon3)
         btn_manual.startAnimation(horizon4)
 
-
-        val thread = RequestThread()
-        thread.start()
+        val poseThread = PoseRequestThread()
+        poseThread.start()
 
         // 카메라
         btn_pose.setOnClickListener(View.OnClickListener {

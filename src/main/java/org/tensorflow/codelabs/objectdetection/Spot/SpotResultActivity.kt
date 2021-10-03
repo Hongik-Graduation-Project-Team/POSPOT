@@ -29,36 +29,12 @@ class SpotResultActivity : AppCompatActivity() {
 
         datas.apply {
             for (i in 0 until mArrayList.size){
-
-                val address = mArrayList[i].get("address")
-                val id = mArrayList[i].get("id")
-                add(SpotProfileData(img = address!!, name = id!!, address = "aaaa", explain = "bbbb"))
+                val img = mArrayList[i].get("address")
+                val name = mArrayList[i].get("id")
+                add(SpotProfileData(img = img!!, name = name!!, explain = "aaaa", address = "bbbb"))
             }
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
-        }
-        datas.apply {
-            /*
-            add(SpotProfileData(img1 = R.drawable.building, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "resnet 라벨값", address = res))
-            add(SpotProfileData(img1 = R.drawable.waterfall, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "yolo 라벨값", address = yolo2))
-            add(SpotProfileData(img1 = R.drawable.catholic_church, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "3", address = "3"))
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "4", address = "4"))
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "5", address = "5"))
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "6", address = "6"))
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "7", address = "7"))
-            add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
-                img4 = R.drawable.empty,img5 = R.drawable.empty, name = "8", address = "8"))
-            */
-            profileAdapter.datas = datas
-            profileAdapter.notifyDataSetChanged()
-
         }
     }
 }

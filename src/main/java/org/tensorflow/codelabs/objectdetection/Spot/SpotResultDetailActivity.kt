@@ -16,7 +16,7 @@ class SpotResultDetailActivity : AppCompatActivity() {
         name.setText(datas.name)
         address.setText(datas.address)
         explain.setText(datas.explain)
-        Glide.with(this).load(datas.img).into(imageview)
+        val DBaddress = "http://54.180.95.7/" + datas.img
+        Glide.with(this).load(DBaddress).into(imageview)
     }
-
 }

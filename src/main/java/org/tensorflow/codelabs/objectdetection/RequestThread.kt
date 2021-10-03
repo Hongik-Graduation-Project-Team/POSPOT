@@ -21,14 +21,9 @@ var mArrayList = ArrayList<HashMap<String, String>>()
 private const val TAG_JSON = "posedata"
 private const val TAG_ID = "id"
 private const val TAG_ADDRESS = "address"
-var testcount = 0
-class RequestThread : Thread() {
+
+class PoseRequestThread : Thread() {
     override fun run() {
-
-
-        testcount = 1
-
-        Log.i("0000","starting requestThread, testcount : " + testcount)
         // searchKeyword1에 보낼 라벨
         val searchKeyword1 = "chair"
         ///
@@ -63,20 +58,7 @@ class RequestThread : Thread() {
             }
             bufferedReader.close()
 
-            val jsonObject = JSONObject(sb.toString())
-            val jsonArray = jsonObject.getJSONArray(TAG_JSON)
-            Log.i("000000","showresult: "+jsonArray.length())
-            for (i in 0 until jsonArray.length()) {
-                val item = jsonArray.getJSONObject(i)
-                val id = item.getString(TAG_ID)
-                val address = item.getString(TAG_ADDRESS)
-                val hashMap = HashMap<String, String>() //
-                hashMap[TAG_ID] = id
-                hashMap[TAG_ADDRESS] = address
-                mArrayList.add(hashMap)
-            }
-
-            //showResult(sb.toString())
+            showResult(sb.toString())
         } catch (e: Exception) {
             Log.e("error","requestthread Error",e)
         }
