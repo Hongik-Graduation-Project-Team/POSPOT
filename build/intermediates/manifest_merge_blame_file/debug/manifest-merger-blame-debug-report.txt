@@ -14,6 +14,7 @@
 11-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:5:5-64
 11-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:5:19-61
 12
+<<<<<<< Updated upstream
 13    <uses-permission android:name="android.permission.CAMERA" />
 13-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:7:5-65
 13-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:7:22-62
@@ -165,3 +166,161 @@
 93    </application>
 94
 95</manifest>
+=======
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:6:5-67
+13-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:6:22-64
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:7:5-65
+14-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:7:22-62
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:8:5-81
+15-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:8:22-78
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:9:5-80
+16-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:9:22-77
+17
+18    <queries>
+18-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:11:5-15:15
+19        <intent>
+19-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:12:9-14:18
+20            <action android:name="android.media.action.IMAGE_CAPTURE" />
+20-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:13:13-73
+20-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:13:21-70
+21        </intent>
+22    </queries>
+23
+24    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+25
+26    <application
+26-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:17:5-73:19
+27        android:allowBackup="true"
+27-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:18:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.6.0] C:\Users\김대경\caches\transforms-3\348f6d52d990d4fb4fcc5abc17a1cdcd\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:extractNativeLibs="false"
+31        android:icon="@mipmap/ic_launcher"
+31-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:19:9-43
+32        android:label="@string/app_name"
+32-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:20:9-41
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:21:9-54
+34        android:supportsRtl="true"
+34-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:22:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.ObjectDetection"
+36-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:23:9-53
+37        android:usesCleartextTraffic="true" >
+37-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:24:9-44
+38        <activity
+38-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:25:9-27:39
+39            android:name="org.tensorflow.codelabs.objectdetection.PoseManualActivity"
+39-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:26:13-47
+40            android:exported="true" />
+40-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:27:13-36
+41        <activity
+41-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:28:9-30:39
+42            android:name="org.tensorflow.codelabs.objectdetection.SpotManualActivity"
+42-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:29:13-47
+43            android:exported="true" />
+43-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:30:13-36
+44        <activity
+44-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:31:9-33:39
+45            android:name="org.tensorflow.codelabs.objectdetection.SpotResultDetailActivity"
+45-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:32:13-53
+46            android:exported="true" />
+46-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:33:13-36
+47        <activity
+47-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:34:9-36:39
+48            android:name="org.tensorflow.codelabs.objectdetection.SpotResultActivity"
+48-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:35:13-47
+49            android:exported="true" />
+49-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:36:13-36
+50        <activity
+50-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:37:9-39:39
+51            android:name="org.tensorflow.codelabs.objectdetection.SpotActivity"
+51-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:38:13-41
+52            android:exported="true" />
+52-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:39:13-36
+53        <activity
+53-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:40:9-42:39
+54            android:name="org.tensorflow.codelabs.objectdetection.ManualActivity"
+54-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:41:13-43
+55            android:exported="true" />
+55-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:42:13-36
+56
+57        <meta-data
+57-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:44:9-46:47
+58            android:name="com.google.android.actions"
+58-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:45:13-54
+59            android:resource="@xml/actions" />
+59-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:46:13-44
+60
+61        <activity
+61-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:48:9-50:39
+62            android:name="org.tensorflow.codelabs.objectdetection.CameraActivity"
+62-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:49:13-43
+63            android:exported="true" />
+63-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:50:13-36
+64        <activity
+64-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:51:9-59:20
+65            android:name="org.tensorflow.codelabs.objectdetection.SplashActivity"
+65-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:52:13-43
+66            android:exported="true" >
+66-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:53:13-36
+67            <intent-filter>
+67-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:54:13-58:29
+68                <action android:name="android.intent.action.MAIN" />
+68-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:55:17-69
+68-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:55:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:57:17-77
+70-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:57:27-74
+71            </intent-filter>
+72        </activity>
+73        <activity
+73-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:60:9-62:39
+74            android:name="org.tensorflow.codelabs.objectdetection.MainActivity"
+74-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:61:13-41
+75            android:exported="true" />
+75-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:62:13-36
+76
+77        <provider
+77-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:64:9-72:20
+78            android:name="androidx.core.content.FileProvider"
+78-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:65:13-62
+79            android:authorities="org.tensorflow.codelabs.objectdetection.fileprovider"
+79-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:66:13-87
+80            android:exported="false"
+80-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:67:13-37
+81            android:grantUriPermissions="true" >
+81-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:68:13-47
+82            <meta-data
+82-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:69:13-71:54
+83                android:name="android.support.FILE_PROVIDER_PATHS"
+83-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:70:17-67
+84                android:resource="@xml/file_paths" />
+84-->C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:71:17-51
+85        </provider>
+86
+87        <service
+87-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:26:9-35:19
+88            android:name="androidx.camera.core.impl.MetadataHolderService"
+88-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:27:13-75
+89            android:enabled="false"
+89-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:28:13-36
+90            android:exported="false" >
+90-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:29:13-37
+91            <meta-data
+91-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:32:13-34:89
+92                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+92-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:33:17-103
+93                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+93-->[androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:34:17-86
+94        </service>
+95    </application>
+96
+97</manifest>
+>>>>>>> Stashed changes
