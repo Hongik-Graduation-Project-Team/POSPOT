@@ -20,8 +20,8 @@
             android:layout_height="0dp"
             android:layout_weight="5"
             android:background="@color/black">
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewpager"
+            <ImageView
+                android:id="@+id/imageview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -42,6 +42,22 @@
             android:gravity="center"
             android:text="@string/name"
             android:textSize="50sp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/mViewPager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/explain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/uhbee_yanneu_bold"
+            android:gravity="center"
+            android:text="explain"
+            android:textSize="30sp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/mViewPager"
             app:layout_constraintEnd_toEndOf="parent"

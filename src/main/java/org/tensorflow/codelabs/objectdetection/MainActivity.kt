@@ -84,8 +84,6 @@ class MainActivity : AppCompatActivity(){
         horizon3 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter3)
         horizon4 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter4)
 
-
-
         text.startAnimation(horizon1)
         btn_pose.startAnimation(horizon2)
         btn_spot.startAnimation(horizon3)
@@ -94,9 +92,6 @@ class MainActivity : AppCompatActivity(){
 
         val thread = RequestThread()
         thread.start()
-
-        Log.i("123","testcount:"+ testcount)
-
 
         // 카메라
         btn_pose.setOnClickListener(View.OnClickListener {

@@ -4,36 +4,36 @@
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_spot_manual.xml.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_spot_manual.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\layout_spot_recycler.xml.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\spot_recycler.xml"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_empty.png.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\empty.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_odd.png.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\odd.png"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\anim_horizon_enter1.xml.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\horizon_enter1.xml"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_button.xml.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable-v24\\button.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\anim_horizon_enter1.xml.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\horizon_enter1.xml"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
@@ -42,10 +42,6 @@
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\layout_spot_detail.xml.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\spot_detail.xml"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_camera.xml.flat",

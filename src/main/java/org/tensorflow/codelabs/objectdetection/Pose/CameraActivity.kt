@@ -54,10 +54,7 @@ class CameraActivity : AppCompatActivity() {
         profileAdapter.setOnItemClickListener(object : PoseProfileAdapter.OnItemClickListener{
             override fun onItemClick(v: View, data: PoseProfileData, pos: Int) {
                 val address = "http://54.180.95.7/" + data.img
-
                 Glide.with(this@CameraActivity).load(address).into(background)
-                
-                //background.setImageResource(address)
             }
         })
 
@@ -188,15 +185,12 @@ class CameraActivity : AppCompatActivity() {
         datas.apply {
             Log.i("1414141","Arraysize = " + mArrayList.size)
             for (i in 0 until mArrayList.size){
-
                 val address = mArrayList[i].get("address")
                 Log.i("1414141","address : " + address )
 
                 val id = mArrayList[i].get("id")
                 Log.i("1414141","id : " + id )
                 add(PoseProfileData(img = address!!, obj = id!!))
-
-
             }
 
             profileAdapter.datas = datas

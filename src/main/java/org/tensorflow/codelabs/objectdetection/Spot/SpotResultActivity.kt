@@ -3,6 +3,7 @@ package org.tensorflow.codelabs.objectdetection
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_spot_result.*
 
 class SpotResultActivity : AppCompatActivity() {
@@ -26,23 +27,18 @@ class SpotResultActivity : AppCompatActivity() {
         profileAdapter = SpotProfileAdapter(this)
         spot_profile.adapter = profileAdapter
 
-        val yolo2: String
-
-        if(yolo.size == 1){
-            yolo2 = yolo[0]
-        }
-        else{
-            yolo2 = yolo[1]
-        }
-
         datas.apply {
-            add(SpotProfileData(img1 = R.drawable.track, img2 = R.drawable.odd,img3 = R.drawable.odd,
-                img4 = R.drawable.odd,img5 = R.drawable.odd, name = "resnet 라벨값", address = res))
+            for (i in 0 until mArrayList.size){
 
+                val address = mArrayList[i].get("address")
+                val id = mArrayList[i].get("id")
+                add(SpotProfileData(img = address!!, name = id!!, address = "aaaa", explain = "bbbb"))
+            }
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }
         datas.apply {
+            /*
             add(SpotProfileData(img1 = R.drawable.building, img2 = R.drawable.empty,img3 = R.drawable.empty,
                 img4 = R.drawable.empty,img5 = R.drawable.empty, name = "resnet 라벨값", address = res))
             add(SpotProfileData(img1 = R.drawable.waterfall, img2 = R.drawable.empty,img3 = R.drawable.empty,
@@ -59,7 +55,7 @@ class SpotResultActivity : AppCompatActivity() {
                 img4 = R.drawable.empty,img5 = R.drawable.empty, name = "7", address = "7"))
             add(SpotProfileData(img1 = R.drawable.odd, img2 = R.drawable.empty,img3 = R.drawable.empty,
                 img4 = R.drawable.empty,img5 = R.drawable.empty, name = "8", address = "8"))
-
+            */
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
 

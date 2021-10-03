@@ -2043,6 +2043,7 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id explain
 id fade
 id fill
 id fillCenter
@@ -2088,6 +2089,7 @@ id imageView2
 id imageView3
 id imageView4
 id imageView5
+id imageview
 id immediateStop
 id included
 id info
@@ -2261,7 +2263,6 @@ id spacer
 id special_effects_controller_view_tag
 id spline
 id split_action_bar
-id spot_detail_view
 id spot_layout
 id spot_profile
 id spread
@@ -2353,7 +2354,6 @@ id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
-id viewpager
 id visible
 id visible_removing_fragment_view_tag
 id west
@@ -2511,7 +2511,6 @@ layout pose_recycler
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout spot_detail
 layout spot_recycler
 layout support_simple_spinner_dropdown_item
 layout test_action_chip

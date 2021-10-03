@@ -4,13 +4,13 @@ package org.tensorflow.codelabs.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import androidx.viewpager2.widget.ViewPager2;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -24,17 +24,22 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
   public final TextView address;
 
   @NonNull
-  public final TextView name;
+  public final TextView explain;
 
   @NonNull
-  public final ViewPager2 viewpager;
+  public final ImageView imageview;
+
+  @NonNull
+  public final TextView name;
 
   private ActivitySpotResultDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView address, @NonNull TextView name, @NonNull ViewPager2 viewpager) {
+      @NonNull TextView address, @NonNull TextView explain, @NonNull ImageView imageview,
+      @NonNull TextView name) {
     this.rootView = rootView;
     this.address = address;
+    this.explain = explain;
+    this.imageview = imageview;
     this.name = name;
-    this.viewpager = viewpager;
   }
 
   @Override
@@ -70,20 +75,26 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.explain;
+      TextView explain = ViewBindings.findChildViewById(rootView, id);
+      if (explain == null) {
+        break missingId;
+      }
+
+      id = R.id.imageview;
+      ImageView imageview = ViewBindings.findChildViewById(rootView, id);
+      if (imageview == null) {
+        break missingId;
+      }
+
       id = R.id.name;
       TextView name = ViewBindings.findChildViewById(rootView, id);
       if (name == null) {
         break missingId;
       }
 
-      id = R.id.viewpager;
-      ViewPager2 viewpager = ViewBindings.findChildViewById(rootView, id);
-      if (viewpager == null) {
-        break missingId;
-      }
-
-      return new ActivitySpotResultDetailBinding((ConstraintLayout) rootView, address, name,
-          viewpager);
+      return new ActivitySpotResultDetailBinding((ConstraintLayout) rootView, address, explain,
+          imageview, name);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
