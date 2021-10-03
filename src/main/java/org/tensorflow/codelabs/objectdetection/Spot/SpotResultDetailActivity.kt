@@ -13,11 +13,7 @@ class SpotResultDetailActivity : AppCompatActivity() {
         overridePendingTransition(0, 0)
 
         datas = intent.getParcelableExtra("data")!!
-        viewpager.adapter = SpotDetailAdaptor(getSpotList())
         name.setText(datas.name)
         address.setText(datas.address)
-    }
-    private fun getSpotList(): ArrayList<Int> {
-        return arrayListOf(datas.img1, datas.img2, datas.img3, datas.img4, datas.img5)
     }
 }

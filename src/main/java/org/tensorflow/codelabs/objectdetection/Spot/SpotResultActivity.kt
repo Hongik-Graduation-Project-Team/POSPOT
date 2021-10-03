@@ -27,8 +27,7 @@ class SpotResultActivity : AppCompatActivity() {
         spot_profile.adapter = profileAdapter
 
         datas.apply {
-            add(SpotProfileData(img1 = R.drawable.track, img2 = R.drawable.odd,img3 = R.drawable.odd,
-                img4 = R.drawable.odd,img5 = R.drawable.odd, name = "resnet 라벨값", address = res))
+            add(SpotProfileData(img = R.drawable.track, name = "resnet 라벨값", address = res))
 
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()

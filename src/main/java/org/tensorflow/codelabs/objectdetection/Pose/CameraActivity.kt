@@ -56,11 +56,8 @@ class CameraActivity : AppCompatActivity() {
                 val address = "http://54.180.95.7/" + data.img
 
                 Glide.with(this@CameraActivity).load(address).into(background)
-                
-                //background.setImageResource(address)
             }
         })
-
         reset.setOnClickListener{
             background.setImageResource(R.drawable.empty)
         }
