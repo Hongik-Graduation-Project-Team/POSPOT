@@ -3,7 +3,7 @@
     package="org.tensorflow.codelabs.objectdetection">
 
     <uses-feature android:name="android.hardware.camera.any" />
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -20,7 +20,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ObjectDetection">
+        android:theme="@style/Theme.ObjectDetection"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".PoseManualActivity"
             android:exported="true" />
