@@ -1,16 +1,9 @@
 -- Merging decision tree log ---
 manifest
-<<<<<<< Updated upstream
 ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
-=======
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
-INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
-INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
-INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
->>>>>>> Stashed changes
 MERGED from [androidx.databinding:viewbinding:7.0.2] C:\Users\김대경\caches\transforms-3\d06e60d6d49ddf04d951d531f336b9c2\transformed\jetified-viewbinding-7.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.6.0] C:\Users\김대경\caches\transforms-3\af088129b264e38e18a4c824e5932518\transformed\jetified-core-ktx-1.6.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:17:1-38:12
@@ -59,34 +52,20 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\김대경\caches\transforms-3\
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\김대경\caches\transforms-3\efb5ab150b0e2afb73890aef5887c8ac\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [org.tensorflow:tensorflow-lite-task-base:0.2.0] C:\Users\김대경\caches\transforms-3\01eb69c5cdeb46857d9e4387e20d40e3\transformed\jetified-tensorflow-lite-task-base-0.2.0\AndroidManifest.xml:2:1-6:12
 MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\김대경\caches\transforms-3\ff42acddc423e3f56f65c50b7a6014b3\transformed\jetified-tensorflow-lite-2.4.0\AndroidManifest.xml:2:1-12:12
-<<<<<<< Updated upstream
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
-=======
-INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
-INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
-INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
->>>>>>> Stashed changes
 	package
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:3:5-54
 		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
 		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
-<<<<<<< Updated upstream
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
 		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12
-=======
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
-		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
-	android:versionCode
-		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12
->>>>>>> Stashed changes
 		INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:11-69
@@ -94,13 +73,6 @@ uses-feature#android.hardware.camera.any
 ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:5:5-64
 	android:name
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:5:19-61
-<<<<<<< Updated upstream
-=======
-uses-permission#android.permission.INTERNET
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:6:5-67
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:6:22-64
->>>>>>> Stashed changes
 uses-permission#android.permission.CAMERA
 ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:7:5-65
 	android:name
@@ -122,11 +94,7 @@ ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:13:13-73
 	android:name
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:13:21-70
 application
-<<<<<<< Updated upstream
 ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:17:5-72:19
-=======
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:17:5-73:19
->>>>>>> Stashed changes
 MERGED from [androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:25:5-36:19
 MERGED from [androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:25:5-36:19
 MERGED from [androidx.camera:camera-core:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\55566cb1d8825b2aa8ec4eed1cd34323\transformed\jetified-camera-core-1.1.0-alpha08\AndroidManifest.xml:25:5-36:19
@@ -161,7 +129,6 @@ MERGED from [org.tensorflow:tensorflow-lite:2.4.0] C:\Users\김대경\caches\tra
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:18:9-35
 	android:theme
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:23:9-53
-<<<<<<< Updated upstream
 activity#org.tensorflow.codelabs.objectdetection.PoseManualActivity
 ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:24:9-26:39
 	android:exported
@@ -248,96 +215,6 @@ ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:68:13-70:5
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:70:17-51
 	android:name
 		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:69:17-67
-=======
-	android:usesCleartextTraffic
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:24:9-44
-activity#org.tensorflow.codelabs.objectdetection.PoseManualActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:25:9-27:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:27:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:26:13-47
-activity#org.tensorflow.codelabs.objectdetection.SpotManualActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:28:9-30:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:30:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:29:13-47
-activity#org.tensorflow.codelabs.objectdetection.SpotResultDetailActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:31:9-33:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:33:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:32:13-53
-activity#org.tensorflow.codelabs.objectdetection.SpotResultActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:34:9-36:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:36:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:35:13-47
-activity#org.tensorflow.codelabs.objectdetection.SpotActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:37:9-39:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:39:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:38:13-41
-activity#org.tensorflow.codelabs.objectdetection.ManualActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:40:9-42:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:42:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:41:13-43
-meta-data#com.google.android.actions
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:44:9-46:47
-	android:resource
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:46:13-44
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:45:13-54
-activity#org.tensorflow.codelabs.objectdetection.CameraActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:48:9-50:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:50:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:49:13-43
-activity#org.tensorflow.codelabs.objectdetection.SplashActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:51:9-59:20
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:53:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:52:13-43
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:54:13-58:29
-action#android.intent.action.MAIN
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:55:17-69
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:55:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:57:17-77
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:57:27-74
-activity#org.tensorflow.codelabs.objectdetection.MainActivity
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:60:9-62:39
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:62:13-36
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:61:13-41
-provider#androidx.core.content.FileProvider
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:64:9-72:20
-	android:grantUriPermissions
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:68:13-47
-	android:authorities
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:66:13-87
-	android:exported
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:67:13-37
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:65:13-62
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:69:13-71:54
-	android:resource
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:71:17-51
-	android:name
-		ADDED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:70:17-67
->>>>>>> Stashed changes
 uses-sdk
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml
@@ -468,8 +345,4 @@ ADDED from [androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\cac
 	android:name
 		ADDED from [androidx.camera:camera-camera2:1.1.0-alpha08] C:\Users\김대경\caches\transforms-3\64cc87cba7035b84cc9918d9f42ac6f7\transformed\jetified-camera-camera2-1.1.0-alpha08\AndroidManifest.xml:33:17-103
 uses-permission#android.permission.READ_PHONE_STATE
-<<<<<<< Updated upstream
 IMPLIED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-74:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
-=======
-IMPLIED from C:\androidSdk\POSPOT_team\app\src\main\AndroidManifest.xml:2:1-75:12 reason: src.java.org.tensorflow.lite.task.core has a targetSdkVersion < 4
->>>>>>> Stashed changes
