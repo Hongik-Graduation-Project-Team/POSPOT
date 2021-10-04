@@ -29,13 +29,14 @@ class SpotProfileAdapter(private val context: Context) : RecyclerView.Adapter<Sp
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val txtName: TextView = itemView.findViewById(R.id.name)
-        private val txtAge: TextView = itemView.findViewById(R.id.address)
+        private val txtAdd: TextView = itemView.findViewById(R.id.address)
         private val imgProfile: ImageView = itemView.findViewById(R.id.photo)
 
         fun bind(item: SpotProfileData) {
             txtName.text = item.name
-            txtAge.text = item.address
-            Glide.with(itemView).load(item.img).into(imgProfile)
+            txtAdd.text = item.address
+            val DBaddress = "http://54.180.95.7/" + item.img
+            Glide.with(itemView).load(DBaddress).into(imgProfile)
 
             itemView.setOnClickListener {
                 Intent(context, SpotResultDetailActivity::class.java).apply {

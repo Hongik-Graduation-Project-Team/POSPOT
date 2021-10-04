@@ -3,6 +3,7 @@ package org.tensorflow.codelabs.objectdetection
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_spot_result.*
 
 class SpotResultActivity : AppCompatActivity() {
@@ -27,8 +28,11 @@ class SpotResultActivity : AppCompatActivity() {
         spot_profile.adapter = profileAdapter
 
         datas.apply {
-            add(SpotProfileData(img = R.drawable.track, name = "resnet 라벨값", address = res))
-
+            for (i in 0 until mArrayList.size){
+                val img = mArrayList[i].get("address")
+                val name = mArrayList[i].get("id")
+                add(SpotProfileData(img = img!!, name = name!!, explain = "aaaa", address = "bbbb"))
+            }
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }

@@ -15,5 +15,8 @@ class SpotResultDetailActivity : AppCompatActivity() {
         datas = intent.getParcelableExtra("data")!!
         name.setText(datas.name)
         address.setText(datas.address)
+        explain.setText(datas.explain)
+        val DBaddress = "http://54.180.95.7/" + datas.img
+        Glide.with(this).load(DBaddress).into(imageview)
     }
 }
