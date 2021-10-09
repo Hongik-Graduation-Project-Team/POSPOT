@@ -35,7 +35,7 @@ class SpotProfileAdapter(private val context: Context) : RecyclerView.Adapter<Sp
         fun bind(item: SpotProfileData) {
             txtName.text = item.name
             txtAdd.text = item.address
-            val DBaddress = "http://54.180.95.7/" + item.img
+            val DBaddress = "http://3.35.171.19/" + item.img
             Glide.with(itemView).load(DBaddress).into(imgProfile)
 
             itemView.setOnClickListener {

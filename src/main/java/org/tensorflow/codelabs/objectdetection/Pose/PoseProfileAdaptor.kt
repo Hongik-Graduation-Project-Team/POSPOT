@@ -37,7 +37,7 @@ class PoseProfileAdapter(private val context: Context) : RecyclerView.Adapter<Po
 
         fun bind(item: PoseProfileData) {
             txtobj.text = item.obj
-            val DBaddress = "http://54.180.95.7/" + item.img
+            val DBaddress = "http://3.35.171.19/" + item.img
             Glide.with(itemView).load(DBaddress).into(imgProfile)
 
             val pos = adapterPosition

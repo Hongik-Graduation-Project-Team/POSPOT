@@ -183,9 +183,9 @@ class CameraActivity : AppCompatActivity() {
         camera_profile.adapter = profileAdapter
 
         datas.apply {
-            for (i in 0 until mArrayList.size){
-                val img = mArrayList[i].get("address")
-                val obj = mArrayList[i].get("id")
+            for (i in 0 until mArrayListPose.size){
+                val img = mArrayListPose[i].get("address")
+                val obj = mArrayListPose[i].get("id")
                 add(PoseProfileData(img = img!!, obj = obj!!))
             }
             profileAdapter.datas = datas

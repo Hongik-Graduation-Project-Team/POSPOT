@@ -40,6 +40,8 @@ import kotlin.collections.ArrayList
 import kotlin.math.max
 import kotlin.math.min
 
+lateinit var maxResLabel: String
+lateinit var maxYoloLabel: ArrayList<String>
 class SpotActivity : AppCompatActivity() {
     companion object {
         const val TAG = "TFLite - ODT"
@@ -50,8 +52,6 @@ class SpotActivity : AppCompatActivity() {
     }
     private lateinit var bitmap: Bitmap
     private lateinit var currentPhotoPath: String
-    private lateinit var maxResLabel: String
-    private lateinit var maxYoloLabel: ArrayList<String>
     private lateinit var horizon1: Animation
     private lateinit var horizon2: Animation
     private lateinit var horizon3: Animation

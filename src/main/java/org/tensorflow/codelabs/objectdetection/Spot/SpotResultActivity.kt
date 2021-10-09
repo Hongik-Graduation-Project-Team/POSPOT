@@ -28,11 +28,15 @@ class SpotResultActivity : AppCompatActivity() {
         spot_profile.adapter = profileAdapter
 
         datas.apply {
-            for (i in 0 until mArrayList.size){
-                val img = mArrayList[i].get("address")
-                val name = mArrayList[i].get("id")
+
+            for (i in 0 until mArrayListSpot.size){
+                val img = mArrayListSpot[i].get("address")
+                val name = mArrayListSpot[i].get("id")
                 add(SpotProfileData(img = img!!, name = name!!, explain = "aaaa", address = "bbbb"))
             }
+
+            //val img = mArrayList[0].get("address")
+            add(SpotProfileData(img = "C:/avenue",name = maxYoloLabel[0], explain = "Asdasd", address = "asdasd"))
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }

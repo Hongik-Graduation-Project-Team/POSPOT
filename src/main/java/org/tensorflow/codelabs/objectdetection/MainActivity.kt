@@ -92,13 +92,14 @@ class MainActivity : AppCompatActivity(){
         val poseThread = PoseRequestThread()
         poseThread.start()
 
+        val spotThread = SpotRequestThread()
+        spotThread.start()
+
         // 카메라
         btn_pose.setOnClickListener(View.OnClickListener {
             try {
                 if(cameraPermissionGranted()) {
-
                     dispatchTakePictureIntent()
-
                 }
             } catch (e: ActivityNotFoundException) {
                 Log.e(TAG, e.message.toString())
