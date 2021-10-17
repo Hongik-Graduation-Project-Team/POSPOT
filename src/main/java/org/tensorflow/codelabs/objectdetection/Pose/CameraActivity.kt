@@ -53,7 +53,7 @@ class CameraActivity : AppCompatActivity() {
 
         profileAdapter.setOnItemClickListener(object : PoseProfileAdapter.OnItemClickListener{
             override fun onItemClick(v: View, data: PoseProfileData, pos: Int) {
-                val DBaddress = "http://54.180.95.7/" + data.img
+                val DBaddress = "http://3.35.171.19/" + data.img
                 Glide.with(this@CameraActivity).load(DBaddress).into(background)
             }
         })
