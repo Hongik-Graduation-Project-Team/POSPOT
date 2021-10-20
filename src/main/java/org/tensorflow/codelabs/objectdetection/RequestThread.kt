@@ -108,7 +108,6 @@ class SpotRequestThread : Thread() {
             postParameters += "label" + (i+1) + "=" + maxYoloLabel[i]
         }
          */
-        Log.i("ddddddddd", postParameters)
         try {
             val url = URL(serverURL)
             val httpURLConnection: HttpURLConnection = url.openConnection() as HttpURLConnection
@@ -138,8 +137,16 @@ class SpotRequestThread : Thread() {
             bufferedReader.close()
             val jsonObject = JSONObject(sb.toString())
             val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
-            spotShowResult(sb.toString())
-            Log.i("ddddddddd", jsonArray.length().toString())
+            val item = jsonArray.getJSONObject(0)
+            val id = item.getString(TAG_ID)
+            val address = item.getString(TAG_ADDRESS)
+            val realaddress = item.getString(TAG_REALADDRESS)
+            val hashMap = HashMap<String, String>() //
+            hashMap[TAG_ID] = id
+            hashMap[TAG_ADDRESS] = address
+            mArrayListSpot.add(hashMap)
+            Log.i("dddddddddd", realaddress)
+            //spotShowResult(sb.toString())
         } catch (e: Exception) {
             Log.e("error","requestthread Error",e)
         }
@@ -151,18 +158,16 @@ fun spotShowResult(mJsonString: String) {
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
         for (i in 0 until jsonArray.length()) {
-            val item = jsonArray.getJSONObject(i)
+            val item = jsonArray.getJSONObject(0)
             val id = item.getString(TAG_ID)
             val address = item.getString(TAG_ADDRESS)
             val realaddress = item.getString(TAG_REALADDRESS)
             val link = item.getString(TAG_LINK)
-            val name = item.getString(TAG_NAME)
             val hashMap = HashMap<String, String>() //
             hashMap[TAG_ID] = id
             hashMap[TAG_ADDRESS] = address
-            //hashMap[TAG_REALADDRESS] = realaddress
-            //hashMap[TAG_LINK] = link
-            //hashMap[TAG_NAME] = name
+            hashMap[TAG_REALADDRESS] = realaddress
+            hashMap[TAG_LINK] = link
             mArrayListSpot.add(hashMap)
         }
     } catch (e: JSONException) {
