@@ -40,8 +40,7 @@ import kotlin.collections.ArrayList
 import kotlin.math.max
 import kotlin.math.min
 
-lateinit var maxResLabel: String
-lateinit var maxYoloLabel: ArrayList<String>
+
 class SpotActivity : AppCompatActivity() {
     companion object {
         const val TAG = "TFLite - ODT"
@@ -56,12 +55,14 @@ class SpotActivity : AppCompatActivity() {
     private lateinit var horizon2: Animation
     private lateinit var horizon3: Animation
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spot)
         overridePendingTransition(0, 0)
 
-        maxYoloLabel = arrayListOf("zero")
+        maxYoloLabel = arrayListOf()
 
         horizon1 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter1)
         horizon2 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter2)
@@ -131,12 +132,13 @@ class SpotActivity : AppCompatActivity() {
             setViewAndDetectResnet(bitmap)
             delay(1)
             dialog.dismiss()
+            val spotThread = SpotRequestThread()
+            spotThread.start()
             resultIntent.putExtra("res", maxResLabel)
             resultIntent.putExtra("yolo", maxYoloLabel)
             startActivity(resultIntent)
             overridePendingTransition(0, 0)
             maxYoloLabel.clear()
-            maxYoloLabel.add("zero")
         }
     }
     //-------------------------------------------------------------------------------------

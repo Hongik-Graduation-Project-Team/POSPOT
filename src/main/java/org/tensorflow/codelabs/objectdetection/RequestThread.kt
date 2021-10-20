@@ -23,15 +23,22 @@ private const val TAG_JSON = "posedata"
 private const val TAG_JSON_2 = "spotdata"
 private const val TAG_ID = "id"
 private const val TAG_ADDRESS = "address"
-private const val TAG_EXPLAIN = "explain"
+private const val TAG_LINK = "link"
 private const val TAG_REALADDRESS = "realaddress"
+private const val TAG_NAME = "name"
 
 class PoseRequestThread : Thread() {
     override fun run() {
-        // searchKeyword1에 보낼 라벨
-        val searchKeyword1 = "chair"
-        val serverURL = "http://3.35.171.19/query.php"
-        val postParameters = "label1=$searchKeyword1"
+
+        val serverURL = "http://3.35.171.19/query2.php"
+
+        maxYoloLabel.add("couch")
+        var postParameters = ""
+        for (i in 0 until maxYoloLabel.size ) {
+            if(i>0) postParameters += "&"
+            postParameters += "label" + (i+1) + "=" + maxYoloLabel[i]
+        }
+
         try {
             val url = URL(serverURL)
             val httpURLConnection: HttpURLConnection = url.openConnection() as HttpURLConnection
@@ -59,6 +66,10 @@ class PoseRequestThread : Thread() {
                 sb.append(line)
             }
             bufferedReader.close()
+            val jsonObject = JSONObject(sb.toString())
+            val jsonArray = jsonObject.getJSONArray(TAG_JSON)
+            spotShowResult(sb.toString())
+            Log.i("ddddddddd", jsonArray.toString())
 
             poseShowResult(sb.toString())
         } catch (e: Exception) {
@@ -71,7 +82,6 @@ fun poseShowResult(mJsonString: String) {
     try {
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON)
-        Log.i("000000","showresult: "+jsonArray.length())
         for (i in 0 until jsonArray.length()) {
             val item = jsonArray.getJSONObject(i)
             val id = item.getString(TAG_ID)
@@ -88,9 +98,17 @@ fun poseShowResult(mJsonString: String) {
 class SpotRequestThread : Thread() {
     override fun run() {
         // searchKeyword1에 보낼 라벨
-        val searchKeyword1 = "chair"
-        val serverURL = "http://3.35.171.19/query.php"
-        val postParameters = "label1=$searchKeyword1"
+
+        val serverURL = "http://3.35.171.19/spotquery.php"
+        var postParameters = "scene=00002"
+        /*
+        maxYoloLabel.add("church")
+        for (i in 0 until maxYoloLabel.size ) {
+            if(i>0) postParameters += "&"
+            postParameters += "label" + (i+1) + "=" + maxYoloLabel[i]
+        }
+         */
+        Log.i("ddddddddd", postParameters)
         try {
             val url = URL(serverURL)
             val httpURLConnection: HttpURLConnection = url.openConnection() as HttpURLConnection
@@ -118,8 +136,10 @@ class SpotRequestThread : Thread() {
                 sb.append(line)
             }
             bufferedReader.close()
-
+            val jsonObject = JSONObject(sb.toString())
+            val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
             spotShowResult(sb.toString())
+            Log.i("ddddddddd", jsonArray.length().toString())
         } catch (e: Exception) {
             Log.e("error","requestthread Error",e)
         }
@@ -130,18 +150,19 @@ fun spotShowResult(mJsonString: String) {
     try {
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
-        Log.i("000000","showresult: "+jsonArray.length())
         for (i in 0 until jsonArray.length()) {
             val item = jsonArray.getJSONObject(i)
             val id = item.getString(TAG_ID)
             val address = item.getString(TAG_ADDRESS)
             val realaddress = item.getString(TAG_REALADDRESS)
-            val explain = item.getString(TAG_EXPLAIN)
+            val link = item.getString(TAG_LINK)
+            val name = item.getString(TAG_NAME)
             val hashMap = HashMap<String, String>() //
             hashMap[TAG_ID] = id
             hashMap[TAG_ADDRESS] = address
-            hashMap[TAG_REALADDRESS] = realaddress
-            hashMap[TAG_EXPLAIN] = explain
+            //hashMap[TAG_REALADDRESS] = realaddress
+            //hashMap[TAG_LINK] = link
+            //hashMap[TAG_NAME] = name
             mArrayListSpot.add(hashMap)
         }
     } catch (e: JSONException) {

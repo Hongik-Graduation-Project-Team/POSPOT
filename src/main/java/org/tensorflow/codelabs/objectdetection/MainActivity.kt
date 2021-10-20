@@ -57,6 +57,9 @@ import kotlin.collections.ArrayList
 import kotlin.math.max
 import kotlin.math.min
 
+lateinit var maxResLabel: String
+lateinit var maxYoloLabel: ArrayList<String>
+
 class MainActivity : AppCompatActivity(){
     companion object {
         const val TAG = "TFLite - ODT"
@@ -64,8 +67,7 @@ class MainActivity : AppCompatActivity(){
         const val REQ_PERMISSION_CAMERA: Int = 1001
     }
     private lateinit var currentPhotoPath: String
-    private lateinit var maxResLabel: String
-    private lateinit var maxYoloLabel: ArrayList<String>
+
     private lateinit var horizon1: Animation
     private lateinit var horizon2: Animation
     private lateinit var horizon3: Animation
@@ -77,7 +79,7 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
         overridePendingTransition(0, 0)
 
-        maxYoloLabel = arrayListOf("zero")
+        maxYoloLabel = arrayListOf()
 
         horizon1 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter1)
         horizon2 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter2)
@@ -88,12 +90,6 @@ class MainActivity : AppCompatActivity(){
         btn_pose.startAnimation(horizon2)
         btn_spot.startAnimation(horizon3)
         btn_manual.startAnimation(horizon4)
-
-        val poseThread = PoseRequestThread()
-        poseThread.start()
-
-        val spotThread = SpotRequestThread()
-        spotThread.start()
 
         // 카메라
         btn_pose.setOnClickListener(View.OnClickListener {
@@ -139,12 +135,15 @@ class MainActivity : AppCompatActivity(){
             setViewAndDetectResnet(bitmap)
             delay(1)
             dialog.dismiss()
+            ////
+            val poseThread = PoseRequestThread()
+            poseThread.start()
+            ////
             resultIntent.putExtra("res", maxResLabel)
             resultIntent.putExtra("yolo", maxYoloLabel)
             startActivity(resultIntent)
             overridePendingTransition(0, 0)
             maxYoloLabel.clear()
-            maxYoloLabel.add("zero")
         }
     }
     //-------------------------------------------------------------------------------------
