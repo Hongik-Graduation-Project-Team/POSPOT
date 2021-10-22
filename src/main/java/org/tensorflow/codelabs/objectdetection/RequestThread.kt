@@ -100,7 +100,7 @@ class SpotRequestThread : Thread() {
         // searchKeyword1에 보낼 라벨
 
         val serverURL = "http://3.35.171.19/spotquery.php"
-        var postParameters = "scene=00002"
+        var postParameters = "scene=00000"
         /*
         maxYoloLabel.add("church")
         for (i in 0 until maxYoloLabel.size ) {
@@ -147,7 +147,7 @@ fun spotShowResult(mJsonString: String) {
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
         for (i in 0 until jsonArray.length()) {
-            val item = jsonArray.getJSONObject(0)
+            val item = jsonArray.getJSONObject(i)
             val id = item.getString(TAG_ID)
             val address = item.getString(TAG_ADDRESS)
             val realaddress = item.getString(TAG_REALADDRESS)

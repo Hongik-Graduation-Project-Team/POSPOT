@@ -188,6 +188,7 @@ class CameraActivity : AppCompatActivity() {
                 val obj = mArrayListPose[i].get("id")
                 add(PoseProfileData(img = img!!, obj = obj!!))
             }
+            mArrayListPose.clear()
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }

@@ -13,10 +13,6 @@ import kotlinx.android.synthetic.main.activity_spot_result_detail.*
 
 class SpotResultActivity : AppCompatActivity() {
     private lateinit var profileAdapter: SpotProfileAdapter
-    private lateinit var img: String
-    private lateinit var name: String
-    private lateinit var address: String
-    private lateinit var link: String
     private val datas = mutableListOf<SpotProfileData>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,11 +20,6 @@ class SpotResultActivity : AppCompatActivity() {
         overridePendingTransition(0, 0)
 
         initRecycler()
-
-        btn_link.setOnClickListener(View.OnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse(link))
-            startActivity(intent)
-        })
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -37,16 +28,15 @@ class SpotResultActivity : AppCompatActivity() {
         spot_profile.adapter = profileAdapter
 
         datas.apply {
-
             for (i in 0 until mArrayListSpot.size){
-                img = mArrayListSpot[i].get("address")!!
-                name = mArrayListSpot[i].get("name")!!
-                address = mArrayListSpot[i].get("realaddress")!!
-                link = mArrayListSpot[i].get("link")!!
-                add(SpotProfileData(img = img, name = name!!, link = link!!, address = address!!))
+                val img = mArrayListSpot[i].get("address")!!
+                val name = mArrayListSpot[i].get("name")!!
+                val address = mArrayListSpot[i].get("realaddress")!!
+                val link = mArrayListSpot[i].get("link")!!
+                Log.i("dddddd",name)
+                add(SpotProfileData(img = img, name = name, link = link, address = address))
             }
-
-            //add(SpotProfileData(img = "images/beach_spot.png", name = mArrayListSpot.size.toString(), link = maxResLabel, address = "bbbb"))
+            mArrayListSpot.clear()
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }

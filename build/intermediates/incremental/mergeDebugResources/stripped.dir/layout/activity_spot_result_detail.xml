@@ -38,6 +38,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/uhbee_yanneu_bold"
             android:gravity="center"
+            android:padding="10dp"
             android:text="@string/name"
             android:textColor="@color/black"
             android:textSize="50sp"
@@ -48,7 +49,7 @@
 
         <Button
             android:id="@+id/btn_link"
-            android:layout_width="60dp"
+            android:layout_width="48dp"
             android:layout_height="0dp"
             android:layout_gravity="bottom|center"
             android:layout_weight="0.5"
@@ -58,7 +59,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="SpeakableTextPresentCheck" />
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/address"

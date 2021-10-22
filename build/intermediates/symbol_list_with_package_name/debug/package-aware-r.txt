@@ -1788,10 +1788,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable building
 drawable button
 drawable camera
-drawable catholic_church
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -1807,6 +1805,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable link
 drawable manual_spot_ex
 drawable manual_spot_ex2
 drawable material_cursor_drawable
@@ -1846,12 +1845,10 @@ drawable notify_panel_notification_icon_bg
 drawable odd
 drawable odd2
 drawable point
-drawable pose_back
 drawable reset
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
-drawable track
 drawable waterfall
 font uhbee_yanneu
 font uhbee_yanneu_bold
@@ -1958,6 +1955,7 @@ id bounceStart
 id btnTakePhoto
 id btn_capture
 id btn_gallery
+id btn_link
 id btn_manual
 id btn_pose
 id btn_spot
@@ -2043,7 +2041,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id explain
 id fade
 id fill
 id fillCenter
@@ -2109,7 +2106,6 @@ id line3
 id linear
 id listMode
 id list_item
-id mViewPager
 id main_layout
 id masked
 id match_constraint
