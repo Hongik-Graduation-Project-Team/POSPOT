@@ -4,6 +4,7 @@ package org.tensorflow.codelabs.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -24,7 +25,7 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
   public final TextView address;
 
   @NonNull
-  public final TextView explain;
+  public final Button btnLink;
 
   @NonNull
   public final ImageView imageview;
@@ -33,11 +34,11 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
   public final TextView name;
 
   private ActivitySpotResultDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView address, @NonNull TextView explain, @NonNull ImageView imageview,
+      @NonNull TextView address, @NonNull Button btnLink, @NonNull ImageView imageview,
       @NonNull TextView name) {
     this.rootView = rootView;
     this.address = address;
-    this.explain = explain;
+    this.btnLink = btnLink;
     this.imageview = imageview;
     this.name = name;
   }
@@ -75,9 +76,9 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.explain;
-      TextView explain = ViewBindings.findChildViewById(rootView, id);
-      if (explain == null) {
+      id = R.id.btn_link;
+      Button btnLink = ViewBindings.findChildViewById(rootView, id);
+      if (btnLink == null) {
         break missingId;
       }
 
@@ -93,7 +94,7 @@ public final class ActivitySpotResultDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivitySpotResultDetailBinding((ConstraintLayout) rootView, address, explain,
+      return new ActivitySpotResultDetailBinding((ConstraintLayout) rootView, address, btnLink,
           imageview, name);
     }
     String missingId = rootView.getResources().getResourceName(id);

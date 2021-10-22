@@ -30,7 +30,7 @@ private const val TAG_NAME = "name"
 class PoseRequestThread : Thread() {
     override fun run() {
 
-        val serverURL = "http://3.35.171.19/query2.php"
+        val serverURL = "http://3.35.171.19/query.php"
 
         maxYoloLabel.add("couch")
         var postParameters = ""
@@ -135,18 +135,7 @@ class SpotRequestThread : Thread() {
                 sb.append(line)
             }
             bufferedReader.close()
-            val jsonObject = JSONObject(sb.toString())
-            val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
-            val item = jsonArray.getJSONObject(0)
-            val id = item.getString(TAG_ID)
-            val address = item.getString(TAG_ADDRESS)
-            val realaddress = item.getString(TAG_REALADDRESS)
-            val hashMap = HashMap<String, String>() //
-            hashMap[TAG_ID] = id
-            hashMap[TAG_ADDRESS] = address
-            mArrayListSpot.add(hashMap)
-            Log.i("dddddddddd", realaddress)
-            //spotShowResult(sb.toString())
+            spotShowResult(sb.toString())
         } catch (e: Exception) {
             Log.e("error","requestthread Error",e)
         }
@@ -163,11 +152,13 @@ fun spotShowResult(mJsonString: String) {
             val address = item.getString(TAG_ADDRESS)
             val realaddress = item.getString(TAG_REALADDRESS)
             val link = item.getString(TAG_LINK)
+            val name = item.getString(TAG_NAME)
             val hashMap = HashMap<String, String>() //
             hashMap[TAG_ID] = id
             hashMap[TAG_ADDRESS] = address
             hashMap[TAG_REALADDRESS] = realaddress
             hashMap[TAG_LINK] = link
+            hashMap[TAG_NAME] = name
             mArrayListSpot.add(hashMap)
         }
     } catch (e: JSONException) {
