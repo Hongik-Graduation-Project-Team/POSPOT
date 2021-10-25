@@ -29,7 +29,7 @@
         android:layout_marginTop="-550dp"
         android:fontFamily="@font/uhbee_yanneu_bold"
         android:padding="15dp"
-        android:text="촬영한 이미지 혹은 갤러리에서 가져온 이미지와 비슷한 명소를 추천해주는 기능입니다. "
+        android:text="촬영한 이미지 혹은 갤러리에서 가져온 이미지와 비슷한 명소를 추천해주는 기능입니다."
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,15 +1,10 @@
 package org.tensorflow.codelabs.objectdetection
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_spot_result.*
-import kotlinx.android.synthetic.main.activity_spot_result_detail.*
 
 class SpotResultActivity : AppCompatActivity() {
     private lateinit var profileAdapter: SpotProfileAdapter
