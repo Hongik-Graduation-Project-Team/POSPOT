@@ -30,9 +30,9 @@ private const val TAG_NAME = "name"
 class PoseRequestThread : Thread() {
     override fun run() {
 
-        val serverURL = "http://3.35.171.19/query.php"
+        val serverURL = "http://3.35.171.19/test.php"
 
-        maxYoloLabel.add("couch")
+        maxYoloLabel.add("chair")
         var postParameters = ""
         for (i in 0 until maxYoloLabel.size ) {
             if(i>0) postParameters += "&"
@@ -84,10 +84,10 @@ fun poseShowResult(mJsonString: String) {
         val jsonArray = jsonObject.getJSONArray(TAG_JSON)
         for (i in 0 until jsonArray.length()) {
             val item = jsonArray.getJSONObject(i)
-            val id = item.getString(TAG_ID)
             val address = item.getString(TAG_ADDRESS)
+            val name = item.getString(TAG_NAME)
             val hashMap = HashMap<String, String>() //
-            hashMap[TAG_ID] = id
+            hashMap[TAG_NAME] = name
             hashMap[TAG_ADDRESS] = address
             mArrayListPose.add(hashMap)
         }
@@ -148,13 +148,12 @@ fun spotShowResult(mJsonString: String) {
         val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
         for (i in 0 until jsonArray.length()) {
             val item = jsonArray.getJSONObject(i)
-            val id = item.getString(TAG_ID)
             val address = item.getString(TAG_ADDRESS)
             val realaddress = item.getString(TAG_REALADDRESS)
             val link = item.getString(TAG_LINK)
             val name = item.getString(TAG_NAME)
-            val hashMap = HashMap<String, String>() //
-            hashMap[TAG_ID] = id
+            val hashMap = HashMap<String, String>()
+
             hashMap[TAG_ADDRESS] = address
             hashMap[TAG_REALADDRESS] = realaddress
             hashMap[TAG_LINK] = link

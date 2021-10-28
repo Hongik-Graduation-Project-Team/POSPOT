@@ -31,19 +31,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button btnSpot;
 
   @NonNull
-  public final ImageView empty0;
+  public final ImageView mainEmpty0;
 
   @NonNull
-  public final ImageView empty1;
+  public final ImageView mainEmpty1;
 
   @NonNull
-  public final ImageView empty2;
+  public final ImageView mainEmpty2;
 
   @NonNull
-  public final ImageView empty3;
-
-  @NonNull
-  public final ImageView empty4;
+  public final ImageView mainEmpty3;
 
   @NonNull
   public final ConstraintLayout mainLayout;
@@ -52,18 +49,17 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView text;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnManual,
-      @NonNull Button btnPose, @NonNull Button btnSpot, @NonNull ImageView empty0,
-      @NonNull ImageView empty1, @NonNull ImageView empty2, @NonNull ImageView empty3,
-      @NonNull ImageView empty4, @NonNull ConstraintLayout mainLayout, @NonNull TextView text) {
+      @NonNull Button btnPose, @NonNull Button btnSpot, @NonNull ImageView mainEmpty0,
+      @NonNull ImageView mainEmpty1, @NonNull ImageView mainEmpty2, @NonNull ImageView mainEmpty3,
+      @NonNull ConstraintLayout mainLayout, @NonNull TextView text) {
     this.rootView = rootView;
     this.btnManual = btnManual;
     this.btnPose = btnPose;
     this.btnSpot = btnSpot;
-    this.empty0 = empty0;
-    this.empty1 = empty1;
-    this.empty2 = empty2;
-    this.empty3 = empty3;
-    this.empty4 = empty4;
+    this.mainEmpty0 = mainEmpty0;
+    this.mainEmpty1 = mainEmpty1;
+    this.mainEmpty2 = mainEmpty2;
+    this.mainEmpty3 = mainEmpty3;
     this.mainLayout = mainLayout;
     this.text = text;
   }
@@ -113,33 +109,27 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.empty0;
-      ImageView empty0 = ViewBindings.findChildViewById(rootView, id);
-      if (empty0 == null) {
+      id = R.id.main_empty0;
+      ImageView mainEmpty0 = ViewBindings.findChildViewById(rootView, id);
+      if (mainEmpty0 == null) {
         break missingId;
       }
 
-      id = R.id.empty1;
-      ImageView empty1 = ViewBindings.findChildViewById(rootView, id);
-      if (empty1 == null) {
+      id = R.id.main_empty1;
+      ImageView mainEmpty1 = ViewBindings.findChildViewById(rootView, id);
+      if (mainEmpty1 == null) {
         break missingId;
       }
 
-      id = R.id.empty2;
-      ImageView empty2 = ViewBindings.findChildViewById(rootView, id);
-      if (empty2 == null) {
+      id = R.id.main_empty2;
+      ImageView mainEmpty2 = ViewBindings.findChildViewById(rootView, id);
+      if (mainEmpty2 == null) {
         break missingId;
       }
 
-      id = R.id.empty3;
-      ImageView empty3 = ViewBindings.findChildViewById(rootView, id);
-      if (empty3 == null) {
-        break missingId;
-      }
-
-      id = R.id.empty4;
-      ImageView empty4 = ViewBindings.findChildViewById(rootView, id);
-      if (empty4 == null) {
+      id = R.id.main_empty3;
+      ImageView mainEmpty3 = ViewBindings.findChildViewById(rootView, id);
+      if (mainEmpty3 == null) {
         break missingId;
       }
 
@@ -152,7 +142,7 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, btnManual, btnPose, btnSpot,
-          empty0, empty1, empty2, empty3, empty4, mainLayout, text);
+          mainEmpty0, mainEmpty1, mainEmpty2, mainEmpty3, mainLayout, text);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

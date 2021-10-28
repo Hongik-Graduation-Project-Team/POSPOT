@@ -1157,6 +1157,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -2034,11 +2035,6 @@ id easeOut
 id east
 id edit_query
 id elastic
-id empty0
-id empty1
-id empty2
-id empty3
-id empty4
 id end
 id endToStart
 id enterAlways
@@ -2111,7 +2107,13 @@ id line3
 id linear
 id listMode
 id list_item
+id main_empty0
+id main_empty1
+id main_empty2
+id main_empty3
 id main_layout
+id manual_empty2
+id manual_empty3
 id masked
 id match_constraint
 id match_parent
@@ -2264,6 +2266,8 @@ id spacer
 id special_effects_controller_view_tag
 id spline
 id split_action_bar
+id spot_empty1
+id spot_empty2
 id spot_layout
 id spot_profile
 id spread

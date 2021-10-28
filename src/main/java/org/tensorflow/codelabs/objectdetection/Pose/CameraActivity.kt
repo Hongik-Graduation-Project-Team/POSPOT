@@ -185,7 +185,7 @@ class CameraActivity : AppCompatActivity() {
         datas.apply {
             for (i in 0 until mArrayListPose.size){
                 val img = mArrayListPose[i].get("address")
-                val obj = mArrayListPose[i].get("id")
+                val obj = mArrayListPose[i].get("name")
                 add(PoseProfileData(img = img!!, obj = obj!!))
             }
             mArrayListPose.clear()

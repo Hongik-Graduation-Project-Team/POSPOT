@@ -16,8 +16,6 @@ org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotResultBinding.ja
  org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotResultBinding
 org/tensorflow/codelabs/objectdetection/databinding/ActivityPoseManualBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.ActivityPoseManualBinding
-org/tensorflow/codelabs/objectdetection/databinding/SpotDetailBinding.java
- org.tensorflow.codelabs.objectdetection.databinding.SpotDetailBinding
 org/tensorflow/codelabs/objectdetection/databinding/SpotRecyclerBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.SpotRecyclerBinding
 org/tensorflow/codelabs/objectdetection/databinding/PoseRecyclerBinding.java

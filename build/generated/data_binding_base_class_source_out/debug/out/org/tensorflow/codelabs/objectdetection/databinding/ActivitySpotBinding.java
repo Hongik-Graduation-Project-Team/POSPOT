@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,16 +28,25 @@ public final class ActivitySpotBinding implements ViewBinding {
   public final Button btnGallery;
 
   @NonNull
+  public final ImageView spotEmpty1;
+
+  @NonNull
+  public final ImageView spotEmpty2;
+
+  @NonNull
   public final ConstraintLayout spotLayout;
 
   @NonNull
   public final TextView text;
 
   private ActivitySpotBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnCapture,
-      @NonNull Button btnGallery, @NonNull ConstraintLayout spotLayout, @NonNull TextView text) {
+      @NonNull Button btnGallery, @NonNull ImageView spotEmpty1, @NonNull ImageView spotEmpty2,
+      @NonNull ConstraintLayout spotLayout, @NonNull TextView text) {
     this.rootView = rootView;
     this.btnCapture = btnCapture;
     this.btnGallery = btnGallery;
+    this.spotEmpty1 = spotEmpty1;
+    this.spotEmpty2 = spotEmpty2;
     this.spotLayout = spotLayout;
     this.text = text;
   }
@@ -80,6 +90,18 @@ public final class ActivitySpotBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spot_empty1;
+      ImageView spotEmpty1 = ViewBindings.findChildViewById(rootView, id);
+      if (spotEmpty1 == null) {
+        break missingId;
+      }
+
+      id = R.id.spot_empty2;
+      ImageView spotEmpty2 = ViewBindings.findChildViewById(rootView, id);
+      if (spotEmpty2 == null) {
+        break missingId;
+      }
+
       ConstraintLayout spotLayout = (ConstraintLayout) rootView;
 
       id = R.id.text;
@@ -89,7 +111,7 @@ public final class ActivitySpotBinding implements ViewBinding {
       }
 
       return new ActivitySpotBinding((ConstraintLayout) rootView, btnCapture, btnGallery,
-          spotLayout, text);
+          spotEmpty1, spotEmpty2, spotLayout, text);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

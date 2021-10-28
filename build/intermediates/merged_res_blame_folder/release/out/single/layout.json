@@ -20,10 +20,6 @@
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_manual.xml"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\spot_detail.xml",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\spot_detail.xml"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_camera.xml",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_camera.xml"
     },
