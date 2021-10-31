@@ -100,7 +100,7 @@ class SpotRequestThread : Thread() {
         // searchKeyword1에 보낼 라벨
 
         val serverURL = "http://3.35.171.19/spotquery.php"
-        var postParameters = "scene=00027"
+        var postParameters = "scene="+ maxResLabel
         /*
         maxYoloLabel.add("church")
         for (i in 0 until maxYoloLabel.size ) {

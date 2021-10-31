@@ -142,7 +142,6 @@
         android:text="AI"
         android:textColor="@color/black"
         android:textSize="15sp"
-
         app:layout_constraintEnd_toEndOf="@+id/imageView1"
         app:layout_constraintStart_toStartOf="@+id/imageView1"
         app:layout_constraintTop_toBottomOf="@+id/imageView1" />

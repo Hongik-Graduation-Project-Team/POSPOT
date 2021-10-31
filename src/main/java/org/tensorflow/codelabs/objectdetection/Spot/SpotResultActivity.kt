@@ -28,7 +28,6 @@ class SpotResultActivity : AppCompatActivity() {
                 val name = mArrayListSpot[i].get("name")!!
                 val address = mArrayListSpot[i].get("realaddress")!!
                 val link = mArrayListSpot[i].get("link")!!
-                Log.i("dddddd",name)
                 add(SpotProfileData(img = img, name = name, link = link, address = address))
             }
             mArrayListSpot.clear()

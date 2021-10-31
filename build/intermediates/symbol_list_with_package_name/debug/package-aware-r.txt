@@ -1807,6 +1807,9 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable link
+drawable manual_pose_ex
+drawable manual_pose_ex2
+drawable manual_pose_ex3
 drawable manual_spot_ex
 drawable manual_spot_ex2
 drawable material_cursor_drawable
@@ -2082,6 +2085,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imageView1
 id imageView2
 id imageView3
@@ -2311,6 +2315,9 @@ id text
 id text2
 id text3
 id text4
+id text5
+id text6
+id text7
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle

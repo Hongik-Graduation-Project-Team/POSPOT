@@ -1806,6 +1806,9 @@ int drawable ic_mtrl_chip_checked_black 0x7f07006e
 int drawable ic_mtrl_chip_checked_circle 0x7f07006f
 int drawable ic_mtrl_chip_close_circle 0x7f070070
 int drawable link 0x7f070071
+int drawable manual_pose_ex 0x7f07009e
+int drawable manual_pose_ex2 0x7f07009f
+int drawable manual_pose_ex3 0x7f0700a0
 int drawable manual_spot_ex 0x7f070072
 int drawable manual_spot_ex2 0x7f070073
 int drawable material_cursor_drawable 0x7f070074
@@ -2081,6 +2084,7 @@ int id ifRoom 0x7f0900e1
 int id ignore 0x7f0900e2
 int id ignoreRequest 0x7f0900e3
 int id image 0x7f0900e4
+int id imageView 0x7f090205
 int id imageView1 0x7f0900e5
 int id imageView2 0x7f0900e6
 int id imageView3 0x7f0900e7
@@ -2310,6 +2314,9 @@ int id text 0x7f0901c6
 int id text2 0x7f0901c7
 int id text3 0x7f0901c8
 int id text4 0x7f0901c9
+int id text5 0x7f090206
+int id text6 0x7f090207
+int id text7 0x7f090208
 int id textEnd 0x7f0901ca
 int id textSpacerNoButtons 0x7f0901cb
 int id textSpacerNoTitle 0x7f0901cc

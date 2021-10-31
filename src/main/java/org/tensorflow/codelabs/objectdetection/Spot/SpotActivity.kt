@@ -128,14 +128,9 @@ class SpotActivity : AppCompatActivity() {
         CoroutineScope(Main).launch{
             dialog.show()
             delay(100)
-            setViewAndDetectYolo(bitmap)
-            setViewAndDetectResnet(bitmap)
+            setViewAndDetect(bitmap)
             delay(1)
             dialog.dismiss()
-            val spotThread = SpotRequestThread()
-            spotThread.start()
-            resultIntent.putExtra("res", maxResLabel)
-            resultIntent.putExtra("yolo", maxYoloLabel)
             startActivity(resultIntent)
             overridePendingTransition(0, 0)
             maxYoloLabel.clear()
@@ -145,8 +140,8 @@ class SpotActivity : AppCompatActivity() {
     //                                         딥러닝
     //-------------------------------------------------------------------------------------
     // Yolo 실행
-    private fun setViewAndDetectYolo(bitmap: Bitmap) {
-        val image = TensorImage.fromBitmap(bitmap)
+    private fun setViewAndDetect(bitmap: Bitmap) {
+        val imageYolo = TensorImage.fromBitmap(bitmap)
         val options = ObjectDetector.ObjectDetectorOptions.builder()
             .setMaxResults(5)
             .setScoreThreshold(0.5f)
@@ -159,7 +154,7 @@ class SpotActivity : AppCompatActivity() {
         )
 
         // 모델 실행 후 결과를 얻음
-        val results = detector.detect(image)
+        val results = detector.detect(imageYolo)
         // 결과도출
         val resultToDisplay = results.map {
             // 최상위(first)라벨값을 가져오고 확률표시
@@ -171,19 +166,22 @@ class SpotActivity : AppCompatActivity() {
         resultToDisplay.forEach {
             maxYoloLabel.add(it.text)
         }
-    }
-    // resnet 실행
-    private fun setViewAndDetectResnet(bitmap: Bitmap){
+
         val model = Resnet.newInstance(this)
         // input 생성
-        val image = TensorImage.fromBitmap(bitmap)
+        val imageRes = TensorImage.fromBitmap(bitmap)
         // 모델 실행 후 결과를 얻음
-        val outputs = model.process(image)
+        val outputs = model.process(imageRes)
         val probability = outputs.probabilityAsCategoryList
         // 가장 높은 score와 그 label
         maxResLabel = probability.maxByOrNull { it!!.score }?.label!!
         // 모델 종료
         model.close()
+
+        //서버통신
+        val spotThread = SpotRequestThread()
+        spotThread.start()
+
     }
     //-------------------------------------------------------------------------------------
     //                                         카메라

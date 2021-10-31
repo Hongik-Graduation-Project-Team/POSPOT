@@ -1,4 +1,4 @@
-#Tue Oct 26 01:30:22 KST 2021
+#Mon Nov 01 04:07:58 KST 2021
 base.1=C\:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
 path.1=classes2.dex
 base.0=C\:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex

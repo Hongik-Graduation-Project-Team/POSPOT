@@ -4,6 +4,7 @@ package org.tensorflow.codelabs.objectdetection.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,16 +21,59 @@ public final class ActivityPoseManualBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView imageView;
+
+  @NonNull
+  public final ImageView imageView2;
+
+  @NonNull
+  public final ImageView imageView3;
+
+  @NonNull
+  public final ImageView imageView4;
+
+  @NonNull
+  public final ImageView imageView5;
+
+  @NonNull
   public final TextView text;
 
   @NonNull
   public final TextView text2;
 
-  private ActivityPoseManualBinding(@NonNull ConstraintLayout rootView, @NonNull TextView text,
-      @NonNull TextView text2) {
+  @NonNull
+  public final TextView text3;
+
+  @NonNull
+  public final TextView text4;
+
+  @NonNull
+  public final TextView text5;
+
+  @NonNull
+  public final TextView text6;
+
+  @NonNull
+  public final TextView text7;
+
+  private ActivityPoseManualBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ImageView imageView, @NonNull ImageView imageView2, @NonNull ImageView imageView3,
+      @NonNull ImageView imageView4, @NonNull ImageView imageView5, @NonNull TextView text,
+      @NonNull TextView text2, @NonNull TextView text3, @NonNull TextView text4,
+      @NonNull TextView text5, @NonNull TextView text6, @NonNull TextView text7) {
     this.rootView = rootView;
+    this.imageView = imageView;
+    this.imageView2 = imageView2;
+    this.imageView3 = imageView3;
+    this.imageView4 = imageView4;
+    this.imageView5 = imageView5;
     this.text = text;
     this.text2 = text2;
+    this.text3 = text3;
+    this.text4 = text4;
+    this.text5 = text5;
+    this.text6 = text6;
+    this.text7 = text7;
   }
 
   @Override
@@ -59,6 +103,36 @@ public final class ActivityPoseManualBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.imageView;
+      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
+      if (imageView == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView2;
+      ImageView imageView2 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView2 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView3;
+      ImageView imageView3 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView3 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView4;
+      ImageView imageView4 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView4 == null) {
+        break missingId;
+      }
+
+      id = R.id.imageView5;
+      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView5 == null) {
+        break missingId;
+      }
+
       id = R.id.text;
       TextView text = ViewBindings.findChildViewById(rootView, id);
       if (text == null) {
@@ -71,7 +145,38 @@ public final class ActivityPoseManualBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityPoseManualBinding((ConstraintLayout) rootView, text, text2);
+      id = R.id.text3;
+      TextView text3 = ViewBindings.findChildViewById(rootView, id);
+      if (text3 == null) {
+        break missingId;
+      }
+
+      id = R.id.text4;
+      TextView text4 = ViewBindings.findChildViewById(rootView, id);
+      if (text4 == null) {
+        break missingId;
+      }
+
+      id = R.id.text5;
+      TextView text5 = ViewBindings.findChildViewById(rootView, id);
+      if (text5 == null) {
+        break missingId;
+      }
+
+      id = R.id.text6;
+      TextView text6 = ViewBindings.findChildViewById(rootView, id);
+      if (text6 == null) {
+        break missingId;
+      }
+
+      id = R.id.text7;
+      TextView text7 = ViewBindings.findChildViewById(rootView, id);
+      if (text7 == null) {
+        break missingId;
+      }
+
+      return new ActivityPoseManualBinding((ConstraintLayout) rootView, imageView, imageView2,
+          imageView3, imageView4, imageView5, text, text2, text3, text4, text5, text6, text7);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
