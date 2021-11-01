@@ -55,8 +55,6 @@ class SpotActivity : AppCompatActivity() {
     private lateinit var horizon2: Animation
     private lateinit var horizon3: Animation
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spot)

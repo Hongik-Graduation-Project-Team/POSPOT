@@ -1,6 +1,7 @@
 package org.tensorflow.codelabs.objectdetection
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -39,6 +40,7 @@ class PoseProfileAdapter(private val context: Context) : RecyclerView.Adapter<Po
             txtobj.text = item.obj
             val DBaddress = "http://3.35.171.19/" + item.img
             Glide.with(itemView).load(DBaddress).into(imgProfile)
+            Log.d("dddd",itemView.background.toString())
 
             val pos = adapterPosition
             if(pos!= RecyclerView.NO_POSITION)

@@ -19,17 +19,29 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
+        android:id="@+id/rotate"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/rotate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
         android:id="@+id/reset"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginEnd="300dp"
         android:layout_marginBottom="140dp"
         android:background="@drawable/reset"
+        android:scaleX="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
-
 
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"

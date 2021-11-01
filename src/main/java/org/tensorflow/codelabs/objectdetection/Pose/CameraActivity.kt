@@ -33,16 +33,11 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
     private var imageCapture: ImageCapture? = null
     private lateinit var outputDirectory: File
-    private lateinit var yolo: ArrayList<String>
-    private lateinit var res: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        res = intent.getStringExtra("res")!!
-        yolo = intent.getStringArrayListExtra("yolo")!!
 
         // 카메라 시작
         startCamera()
@@ -57,6 +52,15 @@ class CameraActivity : AppCompatActivity() {
                 Glide.with(this@CameraActivity).load(DBaddress).into(background)
             }
         })
+
+        rotate.setOnClickListener {
+            if(background.scaleX == -1f){
+                background.scaleX = 1f
+            }
+            else{
+                background.scaleX = -1f
+            }
+        }
 
         reset.setOnClickListener{
             background.setImageResource(R.drawable.empty)

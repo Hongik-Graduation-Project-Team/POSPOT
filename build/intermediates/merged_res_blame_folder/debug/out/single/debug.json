@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_rotate.png.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\rotate.png"
+    },
+    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
@@ -22,10 +26,6 @@
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_empty.png.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\empty.png"
-    },
-    {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_odd.png.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\odd.png"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\anim_horizon_enter1.xml.flat",
@@ -162,10 +162,6 @@
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\font_uhbee_yanneu_bold.ttf.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\font\\uhbee_yanneu_bold.ttf"
-    },
-    {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\drawable_odd2.png.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\odd2.png"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\debug\\anim_fade_in.xml.flat",
