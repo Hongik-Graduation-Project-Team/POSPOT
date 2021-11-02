@@ -32,6 +32,12 @@ public final class ActivityCameraBinding implements ViewBinding {
   public final RecyclerView cameraProfile;
 
   @NonNull
+  public final Button minus;
+
+  @NonNull
+  public final Button plus;
+
+  @NonNull
   public final Button reset;
 
   @NonNull
@@ -41,12 +47,15 @@ public final class ActivityCameraBinding implements ViewBinding {
   public final PreviewView viewFinder;
 
   private ActivityCameraBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView background,
-      @NonNull Button btnTakePhoto, @NonNull RecyclerView cameraProfile, @NonNull Button reset,
-      @NonNull Button rotate, @NonNull PreviewView viewFinder) {
+      @NonNull Button btnTakePhoto, @NonNull RecyclerView cameraProfile, @NonNull Button minus,
+      @NonNull Button plus, @NonNull Button reset, @NonNull Button rotate,
+      @NonNull PreviewView viewFinder) {
     this.rootView = rootView;
     this.background = background;
     this.btnTakePhoto = btnTakePhoto;
     this.cameraProfile = cameraProfile;
+    this.minus = minus;
+    this.plus = plus;
     this.reset = reset;
     this.rotate = rotate;
     this.viewFinder = viewFinder;
@@ -97,6 +106,18 @@ public final class ActivityCameraBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.minus;
+      Button minus = ViewBindings.findChildViewById(rootView, id);
+      if (minus == null) {
+        break missingId;
+      }
+
+      id = R.id.plus;
+      Button plus = ViewBindings.findChildViewById(rootView, id);
+      if (plus == null) {
+        break missingId;
+      }
+
       id = R.id.reset;
       Button reset = ViewBindings.findChildViewById(rootView, id);
       if (reset == null) {
@@ -116,7 +137,7 @@ public final class ActivityCameraBinding implements ViewBinding {
       }
 
       return new ActivityCameraBinding((ConstraintLayout) rootView, background, btnTakePhoto,
-          cameraProfile, reset, rotate, viewFinder);
+          cameraProfile, minus, plus, reset, rotate, viewFinder);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+
     tools:context=".CameraActivity">
 
     <Button
@@ -18,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
+
     <Button
         android:id="@+id/rotate"
         android:layout_width="48dp"
@@ -29,6 +30,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/minus"
+        app:layout_constraintBottom_toTopOf="@+id/rotate"
+        app:layout_constraintEnd_toEndOf="@+id/rotate" />
+
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/plus"
+        app:layout_constraintBottom_toTopOf="@+id/minus"
+        app:layout_constraintEnd_toEndOf="@+id/minus" />
+
 
     <Button
         android:id="@+id/reset"
@@ -70,6 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:scaleType="center"
             android:contentDescription="@string/todo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

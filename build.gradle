@@ -4,6 +4,10 @@ plugins {
     id 'kotlin-android-extensions'
 }
 
+ext {
+    var = kotlin_version
+}
+
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -18,12 +22,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -34,6 +32,12 @@ android {
     buildFeatures {
         mlModelBinding true
         viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
     }
 }
 

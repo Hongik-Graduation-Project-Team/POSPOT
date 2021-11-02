@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.camera.core.*
@@ -33,22 +34,24 @@ class CameraActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCameraBinding
     private var imageCapture: ImageCapture? = null
     private lateinit var outputDirectory: File
+    private lateinit var d: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // 카메라 시작
-        startCamera()
         // recycleview 생성
         initRecycler()
+        // 카메라 시작
+        startCamera()
 
         //displayRatio()
 
         profileAdapter.setOnItemClickListener(object : PoseProfileAdapter.OnItemClickListener{
             override fun onItemClick(v: View, data: PoseProfileData, pos: Int) {
                 val DBaddress = "http://3.35.171.19/" + data.img
+                background.scaleX = 1f
                 Glide.with(this@CameraActivity).load(DBaddress).into(background)
             }
         })
@@ -187,12 +190,11 @@ class CameraActivity : AppCompatActivity() {
         camera_profile.adapter = profileAdapter
 
         datas.apply {
-            for (i in 0 until mArrayListPose.size){
-                val img = mArrayListPose[i].get("address")
-                val obj = mArrayListPose[i].get("name")
+            for (i in 0 until ArrayListData.mArrayListPose.size){
+                val img = ArrayListData.mArrayListPose[i].get("address")
+                val obj = ArrayListData.mArrayListPose[i].get("name")
                 add(PoseProfileData(img = img!!, obj = obj!!))
             }
-            mArrayListPose.clear()
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }

@@ -1,6 +1,8 @@
 package org.tensorflow.codelabs.objectdetection
 
+import android.content.Intent
 import android.util.Log
+import androidx.core.content.ContextCompat.startActivity
 import org.json.JSONException
 import org.json.JSONObject
 import java.lang.Exception
@@ -16,28 +18,31 @@ import java.util.ArrayList
 
 // manifest에 추가
 
-var mArrayListPose = ArrayList<HashMap<String, String>>()
-var mArrayListSpot = ArrayList<HashMap<String, String>>()
-
 private const val TAG_JSON = "posedata"
 private const val TAG_JSON_2 = "spotdata"
-private const val TAG_ID = "id"
 private const val TAG_ADDRESS = "address"
 private const val TAG_LINK = "link"
 private const val TAG_REALADDRESS = "realaddress"
 private const val TAG_NAME = "name"
 
-class PoseRequestThread : Thread() {
-    override fun run() {
+class PoseRequestThread : Thread(){
 
+    var mArrayListPose = ArrayList<HashMap<String, String>>()
+
+    override fun run() {
         val serverURL = "http://3.35.171.19/test.php"
 
-        maxYoloLabel.add("chair")
+        LabelData.yolo.add("chair")
+
+        Log.d("11111111111", LabelData.yolo.toString())
+
         var postParameters = ""
-        for (i in 0 until maxYoloLabel.size ) {
+        for (i in 0 until LabelData.yolo.size ) {
             if(i>0) postParameters += "&"
-            postParameters += "label" + (i+1) + "=" + maxYoloLabel[i]
+            postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
         }
+
+        Log.d("11111111111", LabelData.yolo.toString())
 
         try {
             val url = URL(serverURL)
@@ -66,11 +71,6 @@ class PoseRequestThread : Thread() {
                 sb.append(line)
             }
             bufferedReader.close()
-            val jsonObject = JSONObject(sb.toString())
-            val jsonArray = jsonObject.getJSONArray(TAG_JSON)
-            spotShowResult(sb.toString())
-            Log.i("ddddddddd", jsonArray.toString())
-
             poseShowResult(sb.toString())
         } catch (e: Exception) {
             Log.e("error","requestthread Error",e)
@@ -80,6 +80,9 @@ class PoseRequestThread : Thread() {
 
 fun poseShowResult(mJsonString: String) {
     try {
+        ArrayListData.mArrayListPose.clear()
+        LabelData.yolo.clear()
+        LabelData.resnet = ""
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON)
         for (i in 0 until jsonArray.length()) {
@@ -89,7 +92,7 @@ fun poseShowResult(mJsonString: String) {
             val hashMap = HashMap<String, String>() //
             hashMap[TAG_NAME] = name
             hashMap[TAG_ADDRESS] = address
-            mArrayListPose.add(hashMap)
+            ArrayListData.mArrayListPose.add(hashMap)
         }
     } catch (e: JSONException) {
     }
@@ -97,10 +100,9 @@ fun poseShowResult(mJsonString: String) {
 
 class SpotRequestThread : Thread() {
     override fun run() {
-        // searchKeyword1에 보낼 라벨
-
         val serverURL = "http://3.35.171.19/spotquery.php"
-        var postParameters = "scene="+ maxResLabel
+        val url = URL(serverURL)
+        var postParameters = "scene="+ LabelData.resnet
         /*
         maxYoloLabel.add("church")
         for (i in 0 until maxYoloLabel.size ) {
@@ -108,8 +110,9 @@ class SpotRequestThread : Thread() {
             postParameters += "label" + (i+1) + "=" + maxYoloLabel[i]
         }
          */
+        Log.d(TAG_JSON_2, LabelData.resnet)
         try {
-            val url = URL(serverURL)
+            ArrayListData.mArrayListPose.clear()
             val httpURLConnection: HttpURLConnection = url.openConnection() as HttpURLConnection
             httpURLConnection.setReadTimeout(5000)
             httpURLConnection.setConnectTimeout(5000)
@@ -121,6 +124,7 @@ class SpotRequestThread : Thread() {
             outputStream.flush()
             outputStream.close()
             val responseStatusCode: Int = httpURLConnection.getResponseCode()
+            Log.d(TAG_JSON_2, responseStatusCode.toString())
             val inputStream: InputStream
             inputStream = if (responseStatusCode == HttpURLConnection.HTTP_OK) {
                 httpURLConnection.getInputStream()
@@ -144,6 +148,9 @@ class SpotRequestThread : Thread() {
 
 fun spotShowResult(mJsonString: String) {
     try {
+        ArrayListData.mArrayListSpot.clear()
+        LabelData.yolo.clear()
+        LabelData.resnet = ""
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
         for (i in 0 until jsonArray.length()) {
@@ -158,7 +165,7 @@ fun spotShowResult(mJsonString: String) {
             hashMap[TAG_REALADDRESS] = realaddress
             hashMap[TAG_LINK] = link
             hashMap[TAG_NAME] = name
-            mArrayListSpot.add(hashMap)
+            ArrayListData.mArrayListSpot.add(hashMap)
         }
     } catch (e: JSONException) {
     }

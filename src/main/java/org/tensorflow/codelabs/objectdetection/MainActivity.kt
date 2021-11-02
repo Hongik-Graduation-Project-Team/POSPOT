@@ -19,6 +19,7 @@ package org.tensorflow.codelabs.objectdetection
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -41,10 +42,7 @@ import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 import org.tensorflow.codelabs.objectdetection.ml.Resnet
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.label.Category
@@ -57,8 +55,7 @@ import kotlin.collections.ArrayList
 import kotlin.math.max
 import kotlin.math.min
 
-lateinit var maxResLabel: String
-lateinit var maxYoloLabel: ArrayList<String>
+var count = 0
 
 class MainActivity : AppCompatActivity(){
     companion object {
@@ -78,8 +75,6 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         overridePendingTransition(0, 0)
-
-        maxYoloLabel = arrayListOf()
 
         horizon1 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter1)
         horizon2 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter2)
@@ -121,14 +116,13 @@ class MainActivity : AppCompatActivity(){
         //카메라
         if (resultCode == Activity.RESULT_OK &&
             requestCode == REQUEST_IMAGE_CAPTURE) {
-            val cameraIntent = Intent(this, CameraActivity::class.java)
-            showLoadingDialogAndMakeLabel(getCapturedImage(),cameraIntent)
+                showLoadingDialogAndMakeLabel(getCapturedImage())
         }
     }
-    //다이얼로그 생성, 딥러닝 실행, 라벨 전송
-    private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap,resultIntent: Intent) {
-        val dialog = LoadingDialog(this@MainActivity)
-        CoroutineScope(Dispatchers.Main).launch{
+
+    /*
+    val dialog = LoadingDialog(this)
+    CoroutineScope(Dispatchers.Main).launch{
             dialog.show()
             delay(100)
             setViewAndDetectYolo(bitmap)
@@ -138,11 +132,27 @@ class MainActivity : AppCompatActivity(){
             overridePendingTransition(0, 0)
             maxYoloLabel.clear()
         }
+     */
+    //다이얼로그 생성, 딥러닝 실행, 라벨 전송
+    private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap) {
+        val cameraIntent = Intent(this, CameraActivity::class.java)
+        val dialog = LoadingDialog(this)
+        CoroutineScope(Dispatchers.Main).launch {
+            dialog.show()
+            delay(100)
+            setViewAndDetect(bitmap)
+            delay(1)
+            val poseThread = PoseRequestThread()
+            poseThread.start()
+            dialog.dismiss()
+            startActivity(cameraIntent)
+            overridePendingTransition(0, 0)
+        }
     }
     //-------------------------------------------------------------------------------------
     //                                         딥러닝
     //-------------------------------------------------------------------------------------
-    private fun setViewAndDetectYolo(bitmap: Bitmap) {
+    private fun setViewAndDetect(bitmap: Bitmap) {
         //yolo 실행
         val imageYolo = TensorImage.fromBitmap(bitmap)
         val options = ObjectDetector.ObjectDetectorOptions.builder()
@@ -167,7 +177,7 @@ class MainActivity : AppCompatActivity(){
             DetectionResult(it.boundingBox, text)
         }
         resultToDisplay.forEach {
-            maxYoloLabel.add(it.text)
+            LabelData.yolo.add(it.text)
         }
 
         //resnet 실행
@@ -178,13 +188,9 @@ class MainActivity : AppCompatActivity(){
         val outputs = model.process(imageRes)
         val probability = outputs.probabilityAsCategoryList
         // 가장 높은 score와 그 label
-        maxResLabel = probability.maxByOrNull { it!!.score }?.label!!
+        LabelData.resnet = probability.maxByOrNull { it!!.score }?.label!!
         // 모델 종료
         model.close()
-
-        //서버 통신
-        val poseThread = PoseRequestThread()
-        poseThread.start()
     }
 
     //-------------------------------------------------------------------------------------
@@ -218,7 +224,7 @@ class MainActivity : AppCompatActivity(){
             }
         }
     }
-    // 이미지 파일 내부저장소에 저장 -> 나중에 저장 안해도 가능하게 구현
+    // 이미지 파일 내부저장소에 저장
     @SuppressLint("SimpleDateFormat")
     @Throws(IOException::class)
     private fun createImageFile(): File {

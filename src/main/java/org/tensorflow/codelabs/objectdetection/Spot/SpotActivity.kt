@@ -3,6 +3,7 @@ package org.tensorflow.codelabs.objectdetection
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -22,8 +23,10 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.view.marginTop
 import androidx.exifinterface.media.ExifInterface
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_camera.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.text
 import kotlinx.android.synthetic.main.activity_spot.*
@@ -59,8 +62,6 @@ class SpotActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spot)
         overridePendingTransition(0, 0)
-
-        maxYoloLabel = arrayListOf()
 
         horizon1 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter1)
         horizon2 = AnimationUtils.loadAnimation(this,R.anim.horizon_enter2)
@@ -98,8 +99,7 @@ class SpotActivity : AppCompatActivity() {
         if (resultCode == Activity.RESULT_OK &&
             requestCode == REQUEST_IMAGE_CAPTURE
         ) {
-            val resultIntent = Intent(this, SpotResultActivity::class.java)
-            showLoadingDialogAndMakeLabel(getCapturedImage(),resultIntent)
+            showLoadingDialogAndMakeLabel(getCapturedImage())
         }
         //갤러리
         if(requestCode == REQUEST_OPEN_GALLERY) {
@@ -111,8 +111,7 @@ class SpotActivity : AppCompatActivity() {
                             this.contentResolver,
                             currentImageUri
                         )
-                        val resultIntent = Intent(this, SpotResultActivity::class.java)
-                        showLoadingDialogAndMakeLabel(bitmap,resultIntent)
+                        showLoadingDialogAndMakeLabel(bitmap)
                     }
                 }catch(e: Exception) {
                     e.printStackTrace()
@@ -121,17 +120,19 @@ class SpotActivity : AppCompatActivity() {
         }
     }
     //다이얼로그 생성, 딥러닝 실행, 라벨 전송
-    private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap,resultIntent: Intent) {
-        val dialog = LoadingDialog(this@SpotActivity)
-        CoroutineScope(Main).launch{
+    private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap) {
+        val dialog = LoadingDialog(this)
+        val resultIntent = Intent(this, SpotResultActivity::class.java)
+        CoroutineScope(Dispatchers.Main).launch {
             dialog.show()
             delay(100)
             setViewAndDetect(bitmap)
             delay(1)
+            val spotThread = SpotRequestThread()
+            spotThread.start()
             dialog.dismiss()
             startActivity(resultIntent)
             overridePendingTransition(0, 0)
-            maxYoloLabel.clear()
         }
     }
     //-------------------------------------------------------------------------------------
@@ -162,7 +163,7 @@ class SpotActivity : AppCompatActivity() {
             DetectionResult(it.boundingBox, text)
         }
         resultToDisplay.forEach {
-            maxYoloLabel.add(it.text)
+            LabelData.yolo.add(it.text)
         }
 
         val model = Resnet.newInstance(this)
@@ -172,14 +173,9 @@ class SpotActivity : AppCompatActivity() {
         val outputs = model.process(imageRes)
         val probability = outputs.probabilityAsCategoryList
         // 가장 높은 score와 그 label
-        maxResLabel = probability.maxByOrNull { it!!.score }?.label!!
+        LabelData.resnet = probability.maxByOrNull { it!!.score }?.label!!
         // 모델 종료
         model.close()
-
-        //서버통신
-        val spotThread = SpotRequestThread()
-        spotThread.start()
-
     }
     //-------------------------------------------------------------------------------------
     //                                         카메라

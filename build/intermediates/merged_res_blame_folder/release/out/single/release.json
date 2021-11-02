@@ -8,10 +8,6 @@
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\drawable_odd2.png.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\odd2.png"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\anim_fade_out.xml.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\fade_out.xml"
     },
@@ -76,10 +72,6 @@
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\pose_recycler.xml"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\drawable_odd.png.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\odd.png"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_manual_pose_ex.jpg.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable-v24\\manual_pose_ex.jpg"
     },
@@ -124,6 +116,10 @@
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\drawable_plus.png.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\plus.png"
+    },
+    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\anim_none.xml.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\none.xml"
     },
@@ -142,6 +138,10 @@
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\drawable_rotate.png.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\rotate.png"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\anim_horizon_enter4.xml.flat",
@@ -190,6 +190,10 @@
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\anim_horizon_enter1.xml.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\horizon_enter1.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\drawable_minus.png.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\drawable\\minus.png"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\layout_activity_manual.xml.flat",

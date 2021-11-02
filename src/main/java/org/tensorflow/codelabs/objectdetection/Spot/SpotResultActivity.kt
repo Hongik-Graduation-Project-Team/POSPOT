@@ -23,14 +23,13 @@ class SpotResultActivity : AppCompatActivity() {
         spot_profile.adapter = profileAdapter
 
         datas.apply {
-            for (i in 0 until mArrayListSpot.size){
-                val img = mArrayListSpot[i].get("address")!!
-                val name = mArrayListSpot[i].get("name")!!
-                val address = mArrayListSpot[i].get("realaddress")!!
-                val link = mArrayListSpot[i].get("link")!!
+            for (i in 0 until ArrayListData.mArrayListSpot.size){
+                val img = ArrayListData.mArrayListSpot[i].get("address")!!
+                val name = ArrayListData.mArrayListSpot[i].get("name")!!
+                val address = ArrayListData.mArrayListSpot[i].get("realaddress")!!
+                val link = ArrayListData.mArrayListSpot[i].get("link")!!
                 add(SpotProfileData(img = img, name = name, link = link, address = address))
             }
-            mArrayListSpot.clear()
             profileAdapter.datas = datas
             profileAdapter.notifyDataSetChanged()
         }
