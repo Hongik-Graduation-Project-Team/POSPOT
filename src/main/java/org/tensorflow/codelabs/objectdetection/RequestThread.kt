@@ -100,7 +100,7 @@ fun poseShowResult(mJsonString: String) {
 
 class SpotRequestThread : Thread() {
     override fun run() {
-        val serverURL = "http://3.35.171.19/spotquery.php"
+        val serverURL = "http://3.35.171.19/test2.php"
         val url = URL(serverURL)
         var postParameters = "scene="+ LabelData.resnet
         /*
