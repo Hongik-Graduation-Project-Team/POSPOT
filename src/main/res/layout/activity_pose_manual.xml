@@ -126,7 +126,7 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="150dp"
+        android:layout_width="140dp"
         android:layout_height="100dp"
         android:layout_margin="20dp"
         android:layout_weight="1"
@@ -144,21 +144,21 @@
         android:background="@drawable/point"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintEnd_toStartOf="@+id/text7"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/text7"
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/uhbee_yanneu_bold"
         android:text=" 포즈리스트의 포즈를 클릭하여 출력된 포즈를 변경할 수 있습니다."
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+
         app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
 
