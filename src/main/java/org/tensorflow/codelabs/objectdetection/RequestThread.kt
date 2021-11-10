@@ -32,8 +32,6 @@ class PoseRequestThread : Thread(){
     override fun run() {
         val serverURL = "http://3.35.171.19/test.php"
 
-        LabelData.yolo.add("chair")
-
         Log.d("11111111111", LabelData.yolo.toString())
 
         var postParameters = ""
@@ -100,16 +98,16 @@ fun poseShowResult(mJsonString: String) {
 
 class SpotRequestThread : Thread() {
     override fun run() {
-        val serverURL = "http://3.35.171.19/test2.php"
+        val serverURL = "http://3.35.171.19/test3.php"
         val url = URL(serverURL)
-        var postParameters = "scene="+ LabelData.resnet
-        /*
-        maxYoloLabel.add("church")
-        for (i in 0 until maxYoloLabel.size ) {
+        var postParameters = ""
+
+        for (i in 0 until LabelData.yolo.size ) {
             if(i>0) postParameters += "&"
-            postParameters += "label" + (i+1) + "=" + maxYoloLabel[i]
+            postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
         }
-         */
+        postParameters += "+scene="+ LabelData.resnet
+
         Log.d(TAG_JSON_2, LabelData.resnet)
         try {
             ArrayListData.mArrayListPose.clear()

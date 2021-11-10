@@ -22,7 +22,7 @@ class SpotResultDetailActivity : AppCompatActivity() {
         Glide.with(this).load(DBaddress).into(imageview)
 
         btn_link.setOnClickListener(View.OnClickListener {
-            var intent = Intent(Intent.ACTION_VIEW, Uri.parse(datas.link))
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(datas.link))
             startActivity(intent)
         })
     }
