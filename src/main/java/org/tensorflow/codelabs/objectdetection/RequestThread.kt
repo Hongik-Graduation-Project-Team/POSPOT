@@ -30,13 +30,13 @@ class PoseRequestThread : Thread(){
     override fun run() {
         val serverURL = "http://3.35.171.19/test.php"
 
-        var postParameters = ""
+        var postParameters = "label1=chair"
         for (i in 0 until LabelData.yolo.size ) {
             if(i>0) postParameters += "&"
             postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
         }
 
-        postParameters += "&scene="+LabelData.resnet
+        //postParameters += "&scene="+LabelData.resnet
 
         try {
             val url = URL(serverURL)
@@ -75,7 +75,6 @@ class PoseRequestThread : Thread(){
 fun poseShowResult(mJsonString: String) {
     try {
         ArrayListData.mArrayListPose.clear()
-        LabelData.yolo.clear()
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON)
         for (i in 0 until jsonArray.length()) {
@@ -87,6 +86,8 @@ fun poseShowResult(mJsonString: String) {
             hashMap[TAG_ADDRESS] = address
             ArrayListData.mArrayListPose.add(hashMap)
         }
+        LabelData.yolo.clear()
+        LabelData.resnet = ""
     } catch (e: JSONException) {
     }
 }
@@ -141,7 +142,6 @@ class SpotRequestThread : Thread() {
 fun spotShowResult(mJsonString: String) {
     try {
         ArrayListData.mArrayListSpot.clear()
-        LabelData.yolo.clear()
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
         for (i in 0 until jsonArray.length()) {
@@ -158,6 +158,8 @@ fun spotShowResult(mJsonString: String) {
             hashMap[TAG_NAME] = name
             ArrayListData.mArrayListSpot.add(hashMap)
         }
+        LabelData.yolo.clear()
+        LabelData.resnet = ""
     } catch (e: JSONException) {
     }
 }

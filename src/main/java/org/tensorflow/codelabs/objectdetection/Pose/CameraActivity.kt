@@ -47,13 +47,29 @@ class CameraActivity : AppCompatActivity() {
 
         //displayRatio()
 
+        var DBaddress = ""
+        var imageWidth = 800
+        var imageHeight = 800
         profileAdapter.setOnItemClickListener(object : PoseProfileAdapter.OnItemClickListener{
             override fun onItemClick(v: View, data: PoseProfileData, pos: Int) {
-                val DBaddress = "http://3.35.171.19/" + data.img
+                DBaddress = "http://3.35.171.19/" + data.img
                 background.scaleX = 1f
-                Glide.with(this@CameraActivity).load(DBaddress).into(background)
+                Glide.with(this@CameraActivity).load(DBaddress).override(imageWidth,imageHeight).into(background)
             }
         })
+
+
+        plus.setOnClickListener{
+            imageWidth+=50
+            imageHeight+=50
+            Glide.with(this@CameraActivity).load(DBaddress).override(imageWidth,imageHeight).into(background)
+        }
+
+        minus.setOnClickListener{
+            imageWidth-=50
+            imageHeight-=50
+            Glide.with(this@CameraActivity).load(DBaddress).override(imageWidth,imageHeight).into(background)
+        }
 
         rotate.setOnClickListener {
             if(background.scaleX == -1f){

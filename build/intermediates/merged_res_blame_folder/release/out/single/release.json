@@ -124,12 +124,12 @@
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\none.xml"
     },
     {
-        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\anim_idle.xml.flat",
-        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\idle.xml"
-    },
-    {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\layout_activity_spot_result.xml.flat",
         "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\layout\\activity_spot_result.xml"
+    },
+    {
+        "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\anim_idle.xml.flat",
+        "source": "C:\\androidSdk\\POSPOT_team\\app\\src\\main\\res\\anim\\idle.xml"
     },
     {
         "merged": "C:\\androidSdk\\POSPOT_team\\app\\build\\intermediates\\merged_res\\release\\drawable-v24_manual_pose_ex3.jpg.flat",

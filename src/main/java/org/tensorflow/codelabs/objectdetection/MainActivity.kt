@@ -119,7 +119,6 @@ class MainActivity : AppCompatActivity(){
 
     //다이얼로그 생성, 딥러닝 실행, 라벨 전송
     private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap) {
-        val cameraIntent = Intent(this, CameraActivity::class.java)
         val dialog = LoadingDialog(this)
         CoroutineScope(Dispatchers.Main).launch {
             dialog.show()
@@ -127,12 +126,23 @@ class MainActivity : AppCompatActivity(){
             setViewAndDetect(bitmap)
             val poseThread = PoseRequestThread()
             poseThread.start()
-            delay(500)
+            recursive()
             dialog.dismiss()
+        }
+    }
+
+    private fun recursive() {
+        val cameraIntent = Intent(this, CameraActivity::class.java)
+        if(LabelData.resnet == ""){
+            Log.d(TAG, "아직 초기화되지 않았습니다.")
             startActivity(cameraIntent)
             overridePendingTransition(0, 0)
         }
+        else{
+            recursive()
+        }
     }
+
     //-------------------------------------------------------------------------------------
     //                                         딥러닝
     //-------------------------------------------------------------------------------------
@@ -302,7 +312,7 @@ class MainActivity : AppCompatActivity(){
     // 권한 허용
     private fun cameraPermissionGranted(): Boolean {
         val preference = getPreferences(Context.MODE_PRIVATE)
-        val isFirstCheck = preference.getBoolean("isFirstPermissionCheck", true)
+        val isFirstCheck = preference.getBoolean("isFirstPermissionCheckMainCamera", true)
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
                 // 거부할 경우 왜 필요한지 설명
@@ -317,7 +327,7 @@ class MainActivity : AppCompatActivity(){
             } else {
                 if (isFirstCheck) {
                     // 처음 물었는지 여부를 저장
-                    preference.edit().putBoolean("isFirstPermissionCheck", false).apply()
+                    preference.edit().putBoolean("isFirstPermissionCheckMainCamera", false).apply()
                     // 권한요청
                     ActivityCompat.requestPermissions(this,
                         arrayOf(

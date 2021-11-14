@@ -116,7 +116,6 @@ class SpotActivity : AppCompatActivity() {
     //다이얼로그 생성, 딥러닝 실행, 라벨 전송
     private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap) {
         val dialog = LoadingDialog(this)
-        val resultIntent = Intent(this, SpotResultActivity::class.java)
         CoroutineScope(Dispatchers.Main).launch {
             dialog.show()
             delay(100)
@@ -124,9 +123,20 @@ class SpotActivity : AppCompatActivity() {
             val spotThread = SpotRequestThread()
             spotThread.start()
             delay(500)
+            recursive()
             dialog.dismiss()
+        }
+    }
+
+    private fun recursive() {
+        val resultIntent = Intent(this, SpotResultActivity::class.java)
+        if(LabelData.resnet == ""){
+            Log.d(MainActivity.TAG, "아직 초기화되지 않았습니다.")
             startActivity(resultIntent)
             overridePendingTransition(0, 0)
+        }
+        else{
+            recursive()
         }
     }
     //-------------------------------------------------------------------------------------
@@ -311,7 +321,7 @@ class SpotActivity : AppCompatActivity() {
     // 권한 허용
     private fun cameraPermissionGranted(): Boolean {
         val preference = getPreferences(Context.MODE_PRIVATE)
-        val isFirstCheck = preference.getBoolean("isFirstPermissionCheck", true)
+        val isFirstCheck = preference.getBoolean("isFirstPermissionCheckSpotCamera", true)
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
                 // 거부할 경우 왜 필요한지 설명
@@ -327,7 +337,7 @@ class SpotActivity : AppCompatActivity() {
             } else { //처음보거나, Don't ask again을 선택한 경우
                 if (isFirstCheck) {
                     // 처음 물었는지 여부를 저장
-                    preference.edit().putBoolean("isFirstPermissionCheck", false).apply()
+                    preference.edit().putBoolean("isFirstPermissionCheckSpotCamera", false).apply()
                     // 권한요청
                     ActivityCompat.requestPermissions(this,
                         arrayOf(
@@ -353,7 +363,7 @@ class SpotActivity : AppCompatActivity() {
     }
     private fun galleryPermissionGranted(): Boolean {
         val preference = getPreferences(Context.MODE_PRIVATE)
-        val isFirstCheck = preference.getBoolean("isFirstPermissionCheck", true)
+        val isFirstCheck = preference.getBoolean("isFirstPermissionCheckSpotGallery", true)
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ||
             ContextCompat.checkSelfPermission(this,Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) ||
@@ -372,7 +382,7 @@ class SpotActivity : AppCompatActivity() {
             } else {
                 if (isFirstCheck) {
                     // 처음 물었는지 여부를 저장
-                    preference.edit().putBoolean("isFirstPermissionCheck", false).apply()
+                    preference.edit().putBoolean("isFirstPermissionCheckSpotGallery", false).apply()
                     // 권한요청
                     ActivityCompat.requestPermissions(this,
                         arrayOf(
