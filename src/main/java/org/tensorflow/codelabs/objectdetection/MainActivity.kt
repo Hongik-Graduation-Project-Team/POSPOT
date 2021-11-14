@@ -19,7 +19,6 @@ package org.tensorflow.codelabs.objectdetection
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -45,13 +44,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.*
 import org.tensorflow.codelabs.objectdetection.ml.Resnet
 import org.tensorflow.lite.support.image.TensorImage
-import org.tensorflow.lite.support.label.Category
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.math.max
 import kotlin.math.min
 
@@ -120,26 +117,13 @@ class MainActivity : AppCompatActivity(){
         }
     }
 
-    /*
-    val dialog = LoadingDialog(this)
-    CoroutineScope(Dispatchers.Main).launch{
-            dialog.show()
-            delay(100)
-            setViewAndDetectYolo(bitmap)
-            delay(1)
-            dialog.dismiss()
-            startActivity(resultIntent)
-            overridePendingTransition(0, 0)
-            maxYoloLabel.clear()
-        }
-     */
     //다이얼로그 생성, 딥러닝 실행, 라벨 전송
     private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap) {
         val cameraIntent = Intent(this, CameraActivity::class.java)
         val dialog = LoadingDialog(this)
         CoroutineScope(Dispatchers.Main).launch {
             dialog.show()
-            delay(100)
+            delay(500)
             setViewAndDetect(bitmap)
             delay(1)
             val poseThread = PoseRequestThread()

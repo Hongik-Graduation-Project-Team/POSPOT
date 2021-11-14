@@ -3,7 +3,6 @@ package org.tensorflow.codelabs.objectdetection
 import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Activity
-import android.app.Dialog
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -23,15 +22,11 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
-import androidx.core.view.marginTop
 import androidx.exifinterface.media.ExifInterface
 import com.google.android.material.snackbar.Snackbar
-import kotlinx.android.synthetic.main.activity_camera.*
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.text
 import kotlinx.android.synthetic.main.activity_spot.*
 import kotlinx.coroutines.*
-import kotlinx.coroutines.Dispatchers.Main
 import org.tensorflow.codelabs.objectdetection.ml.Resnet
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
@@ -39,7 +34,6 @@ import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.math.max
 import kotlin.math.min
 
@@ -125,7 +119,7 @@ class SpotActivity : AppCompatActivity() {
         val resultIntent = Intent(this, SpotResultActivity::class.java)
         CoroutineScope(Dispatchers.Main).launch {
             dialog.show()
-            delay(100)
+            delay(500)
             setViewAndDetect(bitmap)
             delay(1)
             val spotThread = SpotRequestThread()

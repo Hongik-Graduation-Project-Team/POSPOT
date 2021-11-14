@@ -27,12 +27,8 @@ private const val TAG_NAME = "name"
 
 class PoseRequestThread : Thread(){
 
-    var mArrayListPose = ArrayList<HashMap<String, String>>()
-
     override fun run() {
         val serverURL = "http://3.35.171.19/test.php"
-
-        Log.d("11111111111", LabelData.yolo.toString())
 
         var postParameters = ""
         for (i in 0 until LabelData.yolo.size ) {
@@ -40,7 +36,7 @@ class PoseRequestThread : Thread(){
             postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
         }
 
-        Log.d("11111111111", LabelData.yolo.toString())
+        postParameters += "&scene="+LabelData.resnet
 
         try {
             val url = URL(serverURL)
@@ -80,7 +76,6 @@ fun poseShowResult(mJsonString: String) {
     try {
         ArrayListData.mArrayListPose.clear()
         LabelData.yolo.clear()
-        LabelData.resnet = ""
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON)
         for (i in 0 until jsonArray.length()) {
@@ -106,11 +101,10 @@ class SpotRequestThread : Thread() {
             if(i>0) postParameters += "&"
             postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
         }
-        postParameters += "+scene="+ LabelData.resnet
+        postParameters += "&scene="+ LabelData.resnet
 
-        Log.d(TAG_JSON_2, LabelData.resnet)
+        Log.d(TAG_JSON_2, postParameters)
         try {
-            ArrayListData.mArrayListPose.clear()
             val httpURLConnection: HttpURLConnection = url.openConnection() as HttpURLConnection
             httpURLConnection.setReadTimeout(5000)
             httpURLConnection.setConnectTimeout(5000)
@@ -148,7 +142,6 @@ fun spotShowResult(mJsonString: String) {
     try {
         ArrayListData.mArrayListSpot.clear()
         LabelData.yolo.clear()
-        LabelData.resnet = ""
         val jsonObject = JSONObject(mJsonString)
         val jsonArray = jsonObject.getJSONArray(TAG_JSON_2)
         for (i in 0 until jsonArray.length()) {
