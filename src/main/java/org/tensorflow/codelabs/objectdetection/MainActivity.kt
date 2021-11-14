@@ -123,11 +123,11 @@ class MainActivity : AppCompatActivity(){
         val dialog = LoadingDialog(this)
         CoroutineScope(Dispatchers.Main).launch {
             dialog.show()
-            delay(500)
+            delay(100)
             setViewAndDetect(bitmap)
-            delay(1)
             val poseThread = PoseRequestThread()
             poseThread.start()
+            delay(500)
             dialog.dismiss()
             startActivity(cameraIntent)
             overridePendingTransition(0, 0)

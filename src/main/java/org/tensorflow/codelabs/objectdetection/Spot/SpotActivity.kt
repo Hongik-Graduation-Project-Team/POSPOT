@@ -119,11 +119,11 @@ class SpotActivity : AppCompatActivity() {
         val resultIntent = Intent(this, SpotResultActivity::class.java)
         CoroutineScope(Dispatchers.Main).launch {
             dialog.show()
-            delay(500)
+            delay(100)
             setViewAndDetect(bitmap)
-            delay(1)
             val spotThread = SpotRequestThread()
             spotThread.start()
+            delay(500)
             dialog.dismiss()
             startActivity(resultIntent)
             overridePendingTransition(0, 0)
