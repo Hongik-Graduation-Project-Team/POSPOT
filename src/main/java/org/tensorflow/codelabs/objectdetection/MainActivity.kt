@@ -116,8 +116,7 @@ class MainActivity : AppCompatActivity(){
                 showLoadingDialogAndMakeLabel(getCapturedImage())
         }
     }
-
-    //다이얼로그 생성, 딥러닝 실행, 라벨 전송
+    // 다이얼로그 생성, 딥러닝 실행, 라벨 전송
     private fun showLoadingDialogAndMakeLabel(bitmap: Bitmap) {
         val dialog = LoadingDialog(this)
         CoroutineScope(Dispatchers.Main).launch {
@@ -130,24 +129,27 @@ class MainActivity : AppCompatActivity(){
             dialog.dismiss()
         }
     }
-
+    // 비동기처리 제어를 위한 재귀함수
     private fun recursive() {
         val cameraIntent = Intent(this, CameraActivity::class.java)
         if(LabelData.resnet == ""){
-            Log.d(TAG, "아직 초기화되지 않았습니다.")
             startActivity(cameraIntent)
             overridePendingTransition(0, 0)
         }
         else{
-            recursive()
+            CoroutineScope(Dispatchers.Main).launch {
+                Log.d(TAG, "아직 초기화되지 않았습니다.")
+                delay(100)
+                recursive()
+            }
         }
     }
 
     //-------------------------------------------------------------------------------------
     //                                         딥러닝
     //-------------------------------------------------------------------------------------
+    // 딥러닝 실행
     private fun setViewAndDetect(bitmap: Bitmap) {
-        //yolo 실행
         val imageYolo = TensorImage.fromBitmap(bitmap)
         val options = ObjectDetector.ObjectDetectorOptions.builder()
             .setMaxResults(5)

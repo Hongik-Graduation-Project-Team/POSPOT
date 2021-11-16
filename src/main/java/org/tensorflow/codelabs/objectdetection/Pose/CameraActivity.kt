@@ -52,7 +52,7 @@ class CameraActivity : AppCompatActivity() {
         var imageHeight = 800
         profileAdapter.setOnItemClickListener(object : PoseProfileAdapter.OnItemClickListener{
             override fun onItemClick(v: View, data: PoseProfileData, pos: Int) {
-                DBaddress = "http://3.35.171.19/" + data.img
+                DBaddress = "http://3.35.171.19/images/pose/" + data.img
                 background.scaleX = 1f
                 Glide.with(this@CameraActivity).load(DBaddress).override(imageWidth,imageHeight).into(background)
             }

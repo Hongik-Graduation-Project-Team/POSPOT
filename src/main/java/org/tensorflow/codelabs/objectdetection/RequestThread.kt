@@ -29,7 +29,7 @@ class PoseRequestThread : Thread(){
 
     override fun run() {
         val serverURL = "http://3.35.171.19/test.php"
-
+        val url = URL(serverURL)
         var postParameters = "label1=chair"
         for (i in 0 until LabelData.yolo.size ) {
             if(i>0) postParameters += "&"
@@ -39,7 +39,6 @@ class PoseRequestThread : Thread(){
         //postParameters += "&scene="+LabelData.resnet
 
         try {
-            val url = URL(serverURL)
             val httpURLConnection: HttpURLConnection = url.openConnection() as HttpURLConnection
             httpURLConnection.setReadTimeout(5000)
             httpURLConnection.setConnectTimeout(5000)

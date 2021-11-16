@@ -127,22 +127,25 @@ class SpotActivity : AppCompatActivity() {
             dialog.dismiss()
         }
     }
-
+    //비동기처리 제어를 위한 재귀함수
     private fun recursive() {
         val resultIntent = Intent(this, SpotResultActivity::class.java)
         if(LabelData.resnet == ""){
-            Log.d(MainActivity.TAG, "아직 초기화되지 않았습니다.")
             startActivity(resultIntent)
             overridePendingTransition(0, 0)
         }
         else{
-            recursive()
+            CoroutineScope(Dispatchers.Main).launch {
+                Log.d(MainActivity.TAG, "아직 초기화되지 않았습니다.")
+                delay(100)
+                recursive()
+            }
         }
     }
     //-------------------------------------------------------------------------------------
     //                                         딥러닝
     //-------------------------------------------------------------------------------------
-    // Yolo 실행
+    // 딥러닝 실행
     private fun setViewAndDetect(bitmap: Bitmap) {
         val imageYolo = TensorImage.fromBitmap(bitmap)
         val options = ObjectDetector.ObjectDetectorOptions.builder()
