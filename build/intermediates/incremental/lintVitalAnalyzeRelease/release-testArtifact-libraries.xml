@@ -133,6 +133,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="org.tensorflow:tensorflow-lite-gpu:2.3.0@aar"
+      jars="C:\Users\김대경\caches\transforms-3\4bb717d3e785d74cd4a1470f649952a5\transformed\jetified-tensorflow-lite-gpu-2.3.0\jars\classes.jar"
+      resolved="org.tensorflow:tensorflow-lite-gpu:2.3.0"
+      folder="C:\Users\김대경\caches\transforms-3\4bb717d3e785d74cd4a1470f649952a5\transformed\jetified-tensorflow-lite-gpu-2.3.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="com.github.bumptech.glide:glide:4.12.0@aar"
       jars="C:\Users\김대경\caches\transforms-3\4e22191aad63db77d3fd14e8ee92a779\transformed\jetified-glide-4.12.0\jars\classes.jar"
       resolved="com.github.bumptech.glide:glide:4.12.0"

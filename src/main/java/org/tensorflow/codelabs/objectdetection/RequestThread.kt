@@ -28,15 +28,18 @@ private const val TAG_NAME = "name"
 class PoseRequestThread : Thread(){
 
     override fun run() {
-        val serverURL = "http://3.35.171.19/test.php"
+        val serverURL = "http://3.35.171.19/posequery.php"
         val url = URL(serverURL)
         var postParameters = "label1=chair"
+
+        /*
         for (i in 0 until LabelData.yolo.size ) {
             if(i>0) postParameters += "&"
             postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
         }
 
-        //postParameters += "&scene="+LabelData.resnet
+         */
+        postParameters += "&scene="+LabelData.resnet
 
         try {
             val httpURLConnection: HttpURLConnection = url.openConnection() as HttpURLConnection

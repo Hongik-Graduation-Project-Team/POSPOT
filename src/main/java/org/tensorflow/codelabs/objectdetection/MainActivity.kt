@@ -27,6 +27,7 @@ import android.graphics.*
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
@@ -41,16 +42,22 @@ import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_splash.*
 import kotlinx.coroutines.*
 import org.tensorflow.codelabs.objectdetection.ml.Resnet
+import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
+import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
 import java.io.File
 import java.io.IOException
+import java.nio.ByteBuffer
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.max
 import kotlin.math.min
+
+
 
 var count = 0
 
@@ -137,11 +144,8 @@ class MainActivity : AppCompatActivity(){
             overridePendingTransition(0, 0)
         }
         else{
-            CoroutineScope(Dispatchers.Main).launch {
-                Log.d(TAG, "아직 초기화되지 않았습니다.")
-                delay(100)
-                recursive()
-            }
+            Log.d(TAG, "아직 초기화되지 않았습니다.")
+            recursive()
         }
     }
 
@@ -151,6 +155,7 @@ class MainActivity : AppCompatActivity(){
     // 딥러닝 실행
     private fun setViewAndDetect(bitmap: Bitmap) {
         val imageYolo = TensorImage.fromBitmap(bitmap)
+
         val options = ObjectDetector.ObjectDetectorOptions.builder()
             .setMaxResults(5)
             .setScoreThreshold(0.5f)
@@ -172,6 +177,7 @@ class MainActivity : AppCompatActivity(){
             // boundingBox를 생성
             DetectionResult(it.boundingBox, text)
         }
+
         resultToDisplay.forEach {
             LabelData.yolo.add(it.text)
         }

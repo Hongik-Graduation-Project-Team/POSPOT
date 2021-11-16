@@ -29,7 +29,17 @@ org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotResultDetailBind
  org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotResultDetailBinding
 org/tensorflow/codelabs/objectdetection/databinding/ActivitySpotManualBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.ActivitySpotManualBinding
+org/tensorflow/codelabs/objectdetection/ml/SosoMetadata.java
+ org.tensorflow.codelabs.objectdetection.ml.SosoMetadata
+ org.tensorflow.codelabs.objectdetection.ml.SosoMetadata$1
+ org.tensorflow.codelabs.objectdetection.ml.SosoMetadata$DetectionResult
+ org.tensorflow.codelabs.objectdetection.ml.SosoMetadata$Outputs
 org/tensorflow/codelabs/objectdetection/databinding/ActivitySplashBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.ActivitySplashBinding
 org/tensorflow/codelabs/objectdetection/databinding/ActivityMainBinding.java
  org.tensorflow.codelabs.objectdetection.databinding.ActivityMainBinding
+org/tensorflow/codelabs/objectdetection/ml/Test1Metadata.java
+ org.tensorflow.codelabs.objectdetection.ml.Test1Metadata
+ org.tensorflow.codelabs.objectdetection.ml.Test1Metadata$1
+ org.tensorflow.codelabs.objectdetection.ml.Test1Metadata$DetectionResult
+ org.tensorflow.codelabs.objectdetection.ml.Test1Metadata$Outputs

@@ -135,11 +135,8 @@ class SpotActivity : AppCompatActivity() {
             overridePendingTransition(0, 0)
         }
         else{
-            CoroutineScope(Dispatchers.Main).launch {
-                Log.d(MainActivity.TAG, "아직 초기화되지 않았습니다.")
-                delay(100)
-                recursive()
-            }
+            Log.d(MainActivity.TAG, "아직 초기화되지 않았습니다.")
+            recursive()
         }
     }
     //-------------------------------------------------------------------------------------
