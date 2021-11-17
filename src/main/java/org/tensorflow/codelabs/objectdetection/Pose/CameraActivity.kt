@@ -48,8 +48,8 @@ class CameraActivity : AppCompatActivity() {
         //displayRatio()
 
         var DBaddress = ""
-        var imageWidth = 800
-        var imageHeight = 800
+        var imageWidth = 1200
+        var imageHeight = 1200
         profileAdapter.setOnItemClickListener(object : PoseProfileAdapter.OnItemClickListener{
             override fun onItemClick(v: View, data: PoseProfileData, pos: Int) {
                 DBaddress = "http://3.35.171.19/images/pose/" + data.img
@@ -139,12 +139,12 @@ class CameraActivity : AppCompatActivity() {
                 override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
                     // 저장에 성공하면 저장위치의 uri 출력
                     val savedUri = Uri.fromFile(photoFile)
-                    val msg = "Photo Saved"
+                    val msg = "사진 저장"
                     mediaScan(savedUri)
                     Toast.makeText(
                         this@CameraActivity,
-                        "$msg $savedUri",
-                        Toast.LENGTH_LONG
+                        msg,
+                        Toast.LENGTH_SHORT
                     ).show()
                 }
 

@@ -1,8 +1,6 @@
 package org.tensorflow.codelabs.objectdetection
 
-import android.content.Intent
 import android.util.Log
-import androidx.core.content.ContextCompat.startActivity
 import org.json.JSONException
 import org.json.JSONObject
 import java.lang.Exception
@@ -14,7 +12,7 @@ import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
 import java.io.OutputStream
-import java.util.ArrayList
+import kotlin.collections.ArrayList
 
 // manifest에 추가
 
@@ -30,15 +28,21 @@ class PoseRequestThread : Thread(){
     override fun run() {
         val serverURL = "http://3.35.171.19/posequery.php"
         val url = URL(serverURL)
-        var postParameters = "label1=chair"
+        var postParameters = ""
 
-        /*
-        for (i in 0 until LabelData.yolo.size ) {
-            if(i>0) postParameters += "&"
-            postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
+        LabelData.yolo = LabelData.yolo.distinct().toMutableList()
+
+        for (i in 0 until 3 ) {
+            if(LabelData.yolo.size > i) {
+                if (i > 0) postParameters += "&"
+                postParameters += "label" + (i + 1) + "=" + LabelData.yolo[i]
+            }
+            else
+                break
         }
 
-         */
+        Log.d("!!!!!!!!!!!!!!",LabelData.yolo.toString())
+
         postParameters += "&scene="+LabelData.resnet
 
         try {
@@ -92,6 +96,16 @@ fun poseShowResult(mJsonString: String) {
         LabelData.resnet = ""
     } catch (e: JSONException) {
     }
+    if(ArrayListData.mArrayListPose.size == 0){
+        for (i in 0 until 5 ) {
+            val hashMap = HashMap<String, String>() //
+            hashMap[TAG_NAME] = "Free"
+            hashMap[TAG_ADDRESS] = "free" + (i + 1) + ".png"
+            ArrayListData.mArrayListPose.add(hashMap)
+        }
+    }
+    LabelData.yolo.clear()
+    LabelData.resnet = ""
 }
 
 class SpotRequestThread : Thread() {
@@ -100,9 +114,15 @@ class SpotRequestThread : Thread() {
         val url = URL(serverURL)
         var postParameters = ""
 
-        for (i in 0 until LabelData.yolo.size ) {
-            if(i>0) postParameters += "&"
-            postParameters += "label" + (i+1) + "=" + LabelData.yolo[i]
+        LabelData.yolo = LabelData.yolo.distinct().toMutableList()
+
+        for (i in 0 until 3 ) {
+            if(LabelData.yolo.size > i) {
+                if (i > 0) postParameters += "&"
+                postParameters += "label" + (i + 1) + "=" + LabelData.yolo[i]
+            }
+            else
+                break
         }
         postParameters += "&scene="+ LabelData.resnet
 

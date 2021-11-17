@@ -16,7 +16,7 @@ data class PoseProfileData(
 
 object LabelData {
     var resnet: String = ""
-    var yolo: ArrayList<String> = arrayListOf()
+    var yolo: MutableList<String> = mutableListOf()
 }
 
 object ArrayListData{

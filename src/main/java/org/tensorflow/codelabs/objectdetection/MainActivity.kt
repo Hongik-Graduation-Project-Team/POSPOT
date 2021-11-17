@@ -27,7 +27,6 @@ import android.graphics.*
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.os.Handler
 import android.provider.MediaStore
 import android.provider.Settings
 import android.util.Log
@@ -42,16 +41,12 @@ import androidx.core.content.FileProvider
 import androidx.exifinterface.media.ExifInterface
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_splash.*
 import kotlinx.coroutines.*
 import org.tensorflow.codelabs.objectdetection.ml.Resnet
-import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.TensorImage
-import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
 import java.io.File
 import java.io.IOException
-import java.nio.ByteBuffer
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.max
@@ -181,6 +176,7 @@ class MainActivity : AppCompatActivity(){
         resultToDisplay.forEach {
             LabelData.yolo.add(it.text)
         }
+
 
         //resnet 실행
         val model = Resnet.newInstance(this)
